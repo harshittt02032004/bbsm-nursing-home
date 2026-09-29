@@ -16,6 +16,10 @@
   --font-sans: var(--font-archivo), system-ui, sans-serif;
   --font-deva: var(--font-noto-deva), serif;
 
+  --radius-img: clamp(16px, 1.5vw, 26px);
+  --radius-card: clamp(12px, 1vw, 16px);
+  --radius-thumb: 12px;
+
   --ease-out-soft: cubic-bezier(0.16, 0.8, 0.28, 1);
   --ease-expo: cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -64,7 +68,7 @@ html.lenis, html.lenis body { height: auto; }
     position: relative; isolation: isolate; overflow: hidden;
     display: inline-flex; align-items: center; justify-content: center; gap: 12px;
     font: 600 13.5px/1 var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 20px 30px; cursor: pointer; border: 1px solid transparent;
+    padding: 20px 32px; cursor: pointer; border: 1px solid transparent; border-radius: 999px;
     transition: color 0.5s var(--ease-expo), border-color 0.5s var(--ease-expo);
   }
   .btn::before {
@@ -118,11 +122,18 @@ html.lenis, html.lenis body { height: auto; }
   .ph {
     background: linear-gradient(160deg, #e4ebf2, #c9d8e5);
     border: 1px solid rgba(7, 81, 139, 0.14);
+    border-radius: var(--radius-img);
   }
   .ph-dark {
     background: linear-gradient(160deg, #1d2c3a, #0e1a26);
     border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-img);
   }
+
+  /* Soft-cornered media frames; isolation keeps corners crisp while children scale */
+  .r-img { border-radius: var(--radius-img); overflow: hidden; isolation: isolate; }
+  .r-card { border-radius: var(--radius-card); overflow: hidden; isolation: isolate; }
+  .r-thumb { border-radius: var(--radius-thumb); overflow: hidden; isolation: isolate; }
 
   .hscroll { scrollbar-width: thin; scrollbar-color: var(--color-blue) transparent; }
   .hscroll::-webkit-scrollbar { height: 2px; }
@@ -151,7 +162,7 @@ html.lenis, html.lenis body { height: auto; }
 @keyframes wordRise { from { transform: translateY(108%); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeRise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
-@keyframes clipUp { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes clipUp { from { clip-path: inset(100% 0 0 0 round var(--radius-img)); } to { clip-path: inset(0 0 0 0 round var(--radius-img)); } }
 @keyframes settle { from { transform: scale(1.18); } to { transform: scale(1); } }
 @keyframes lineGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes ruleGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
@@ -166,3 +177,8 @@ html.lenis, html.lenis body { height: auto; }
 .scroll-cue { animation: scrollCue 1.8s var(--ease-out-soft) infinite; }
 @keyframes breathe { 0%, 100% { opacity: 0.35; transform: translate(-50%, -50%) scale(0.92); } 50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.06); } }
 .tribute-glow { background: radial-gradient(circle, rgba(201, 168, 76, 0.16), rgba(201, 168, 76, 0) 65%); animation: breathe 7s ease-in-out infinite; }
+
+/* Small phones: keep buttons inside a 320px screen */
+@media (max-width: 420px) {
+  .btn { padding: 17px 22px; font-size: 12.5px; letter-spacing: 0.08em; gap: 10px; }
+}

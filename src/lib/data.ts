@@ -436,8 +436,11 @@ export const WHY = [
   { title: "Trust.", body: "Four decades. Thousands of families. Care You Can Trust." },
 ];
 
-/** Real Google reviews (public). Confirm with BBSM before launch. */
+/** Real Google reviews, quoted verbatim from BBSM's Google Business Profile (checked 29 Sep 2026). */
+export const GOOGLE_RATING = { rating: 4.2, count: 5 };
+
 export const REVIEWS = [
-  { quote: "Best ortho and eye and endocrine surgeon in Raebareli.", name: "Pradeep Singh", source: "Google review" },
-  { quote: "Best Nursing Home and excellent staff in Raebareli.", name: "Swatantra Healthcare Services", source: "Google review" },
+  { quote: "Best ortho and eye and endocrine surgeon in raebareli", name: "Pradeep Singh", stars: 5, year: "2022" },
+  { quote: "Best Nursing Home and excellent staff in Raebareli.", name: "Swatantra Healthcare Services", stars: 5, year: "2023" },
+  { quote: "I can fully satistfied. My health is well and my experience is best.good facielty.", name: "Tommy Singh", stars: 5, year: "2018" },
 ];

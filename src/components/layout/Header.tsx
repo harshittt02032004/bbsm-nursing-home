@@ -88,7 +88,7 @@ export default function Header() {
         >
           <div className="wrap flex h-[82px] items-center gap-8">
             <Link href="/" className="flex shrink-0 items-center gap-3.5" aria-label="BBSM Nursing Home — Home">
-              <span className={`flex h-[52px] items-center ${tribute && !scrolled ? "rounded-none bg-paper px-1.5" : ""}`}>
+              <span className={`flex h-[52px] items-center ${tribute && !scrolled ? "rounded-xl bg-paper px-1.5" : ""}`}>
                 <Image src="/images/bbsm-logo.png" alt="BBSM Nursing Home logo" width={36} height={46} className="h-[46px] w-auto" preload />
               </span>
               <span className="hidden leading-[1.15] sm:block">
@@ -99,7 +99,7 @@ export default function Header() {
               </span>
             </Link>
 
-            <nav className="ml-auto hidden items-center gap-[clamp(14px,1.5vw,28px)] whitespace-nowrap min-[1200px]:flex" aria-label="Main">
+            <nav className="ml-auto hidden items-center gap-[clamp(14px,1.5vw,28px)] whitespace-nowrap min-[1320px]:flex" aria-label="Main">
               {NAV.map((n) => (
                 <Link
                   key={n.href}
@@ -113,7 +113,7 @@ export default function Header() {
               <button
                 onClick={() => setSearchOpen(true)}
                 aria-label="Search (Ctrl+K)"
-                className={`grid h-11 w-11 place-items-center border transition-colors hover:border-red hover:text-red ${
+                className={`grid h-11 w-11 place-items-center rounded-full border transition-colors hover:border-red hover:text-red ${
                   tribute && !scrolled ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"
                 }`}
               >
@@ -124,22 +124,22 @@ export default function Header() {
               </a>
             </nav>
 
-            <div className="ml-auto flex items-center gap-2.5 min-[1200px]:hidden">
+            <div className="ml-auto flex items-center gap-2 sm:gap-2.5 min-[1320px]:hidden">
               <button
                 onClick={() => setSearchOpen(true)}
                 aria-label="Search"
-                className={`grid h-[44px] w-[44px] place-items-center border ${tribute && !scrolled ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"}`}
+                className={`grid h-[44px] w-[44px] place-items-center rounded-full border ${tribute && !scrolled ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"}`}
               >
                 <SearchIcon />
               </button>
-              <a href={SITE.phoneHref} className="btn btn-red !px-4 !py-[15px] !text-[12px]">
+              <a href={SITE.phoneHref} className="btn btn-red !px-3.5 !py-[15px] !text-[12px] sm:!px-4">
                 Call
               </a>
               <button
                 onClick={() => setMenu((m) => !m)}
                 aria-expanded={menu}
                 aria-controls="mobile-menu"
-                className={`meta relative h-[44px] border px-4 !text-[12px] !font-semibold ${tribute && !scrolled && !menu ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"}`}
+                className={`meta relative h-[44px] rounded-full border px-4 !text-[12px] sm:px-5 !font-semibold ${tribute && !scrolled && !menu ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"}`}
               >
                 {menu ? "Close" : "Menu"}
               </button>

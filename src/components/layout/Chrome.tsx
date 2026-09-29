@@ -21,7 +21,7 @@ export function MobileDock() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-3 overflow-hidden bg-ink text-white shadow-[0_10px_40px_rgba(6,59,104,.35)] min-[1200px]:hidden"
+          className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-3 overflow-hidden rounded-full bg-ink text-white shadow-[0_10px_40px_rgba(6,59,104,.35)] min-[1320px]:hidden"
           style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
           initial={{ y: 90, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

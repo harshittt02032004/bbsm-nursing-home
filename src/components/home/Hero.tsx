@@ -66,7 +66,7 @@ export default function Hero() {
         </div>
 
         {/* Desktop figure */}
-        <figure className="a-clip relative m-0 hidden min-h-[clamp(300px,58vh,680px)] self-stretch overflow-hidden lg:block" style={{ animationDelay: "0.35s" }}>
+        <figure className="a-clip r-img relative m-0 hidden min-h-[clamp(300px,58vh,680px)] self-stretch lg:block" style={{ animationDelay: "0.35s" }}>
           <Parallax amount={60} className="absolute inset-[-60px_0]">
             <div className="a-settle relative h-full w-full" style={{ animationDelay: "0.35s" }}>
               <Image

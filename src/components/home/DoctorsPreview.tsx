@@ -55,11 +55,11 @@ export default function DoctorsPreview() {
             })}
           </ul>
 
-          <div className="sticky top-[110px] self-start">
+          <div className="sticky top-[100px] self-start">
             <AnimatePresence mode="wait">
               <motion.div key={doc.slug} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.42, ease: "easeOut" }}>
-                <motion.div initial={{ clipPath: "inset(0 0 12% 0)" }} animate={{ clipPath: "inset(0 0 0% 0)" }} transition={{ duration: 0.9, ease: EXPO }}>
-                  <DoctorPortrait doctor={doc} className="mr-[clamp(-64px,-4vw,0px)] h-[clamp(340px,56vh,600px)]" />
+                <motion.div initial={{ clipPath: "inset(0 0 12% 0 round var(--radius-img))" }} animate={{ clipPath: "inset(0 0 0% 0 round var(--radius-img))" }} transition={{ duration: 0.9, ease: EXPO }}>
+                  <DoctorPortrait doctor={doc} className="mr-[clamp(-64px,-4vw,0px)] h-[clamp(220px,calc(100svh-500px),600px)]" />
                 </motion.div>
                 <motion.h3
                   initial={{ y: 20, opacity: 0 }}

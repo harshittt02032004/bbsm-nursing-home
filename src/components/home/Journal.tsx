@@ -30,7 +30,7 @@ export default function Journal() {
             {rest.map((a, i) => (
               <Reveal key={a.slug} delay={0.1 + i * 0.1}>
                 <Link href={`/journal/${a.slug}`} className="group grid items-center gap-5 text-ink hover:text-ink [grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))]">
-                  <div className="relative h-[clamp(130px,18vh,170px)] overflow-hidden">
+                  <div className="r-card relative h-[clamp(130px,18vh,170px)]">
                     <Image src={a.image} alt={a.imageAlt} fill sizes="(min-width: 900px) 22vw, 100vw" className="object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.06]" />
                   </div>
                   <div>

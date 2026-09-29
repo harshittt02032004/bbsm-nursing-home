@@ -61,7 +61,7 @@ function Panel({ onClose }: { onClose: () => void }) {
       aria-label="Search BBSM"
     >
       <motion.div
-        className="mt-[clamp(0px,10vh,120px)] h-fit max-h-[86vh] w-full max-w-[860px] overflow-hidden bg-paper"
+        className="mt-[clamp(0px,10vh,120px)] h-fit max-h-[86vh] w-[calc(100%-24px)] max-w-[860px] overflow-hidden rounded-[var(--radius-img)] bg-paper shadow-[0_30px_80px_rgba(6,20,35,.35)]"
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: -20, opacity: 0 }}
@@ -87,7 +87,7 @@ function Panel({ onClose }: { onClose: () => void }) {
             aria-expanded="true"
             aria-controls="search-results"
           />
-          <button onClick={onClose} className="meta shrink-0 border hair px-3 py-2 text-ink/60 hover:text-red" style={{ fontSize: 10.5 }}>
+          <button onClick={onClose} className="meta shrink-0 rounded-full border hair px-3.5 py-2 text-ink/60 hover:text-red" style={{ fontSize: 10.5 }}>
             Esc
           </button>
         </div>

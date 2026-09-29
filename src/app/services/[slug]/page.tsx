@@ -95,7 +95,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
               </ol>
             </div>
             <Reveal delay={0.4}>
-              <p className="mt-10 border border-red/25 bg-red/[.04] px-5 py-4 text-[14px] leading-relaxed text-ink/75">
+              <p className="r-card mt-10 border border-red/25 bg-red/[.04] px-5 py-4 text-[14px] leading-relaxed text-ink/75">
                 For sudden severe pain, heavy bleeding, breathlessness or loss of consciousness, call our 24×7 emergency line{" "}
                 <a href={SITE.emergencyHref} className="font-semibold text-red">{SITE.emergency}</a>.
               </p>
@@ -111,7 +111,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
             {docs.map((d, i) => (
               <Reveal key={d!.slug} delay={i * 0.1}>
                 <Link href={`/doctors/${d!.slug}`} className="group block text-ink hover:text-ink">
-                  <div className="overflow-hidden">
+                  <div className="r-img">
                     <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.03]">
                       <DoctorPortrait doctor={d!} className="h-[380px]" sizes="(min-width: 900px) 30vw, 100vw" />
                     </div>

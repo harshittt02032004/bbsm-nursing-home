@@ -14,14 +14,14 @@ const initials = (name: string) =>
 export default function DoctorPortrait({ doctor, className = "", sizes = "(min-width: 1024px) 40vw, 100vw", preload }: { doctor: Doctor; className?: string; sizes?: string; preload?: boolean }) {
   if (doctor.portrait) {
     return (
-      <div className={`relative overflow-hidden bg-mist ${className}`}>
+      <div className={`r-img relative bg-mist ${className}`}>
         <Image src={doctor.portrait} alt={`${doctor.name}, ${doctor.title} at BBSM Nursing Home, Raebareli`} fill sizes={sizes} preload={preload} className="object-cover object-top" />
       </div>
     );
   }
   const accent = doctor.group === "Super Speciality" ? "#C52030" : doctor.group === "Daily OPD" ? "#07518B" : "#111820";
   return (
-    <div className={`ph relative flex items-end overflow-hidden p-6 ${className}`} role="img" aria-label={`Portrait of ${doctor.name} — to be supplied`}>
+    <div className={`ph r-img relative flex items-end p-6 ${className}`} role="img" aria-label={`Portrait of ${doctor.name} — to be supplied`}>
       <span
         aria-hidden
         className="pointer-events-none absolute -right-[0.06em] -top-[0.18em] select-none font-serif leading-none"

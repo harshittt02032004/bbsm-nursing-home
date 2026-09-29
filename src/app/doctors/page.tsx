@@ -57,7 +57,7 @@ export default function DoctorsPage() {
               {DOCTORS.filter((d) => d.group === g.key).map((d) => (
                 <article key={d.slug} className="grid gap-[clamp(20px,3vw,56px)] border-b border-ink/11 py-[clamp(30px,5vh,56px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
                   <Reveal>
-                    <Link href={`/doctors/${d.slug}`} aria-label={`${d.name} — profile`} className="group block overflow-hidden">
+                    <Link href={`/doctors/${d.slug}`} aria-label={`${d.name} — profile`} className="r-img group block">
                       <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.03]">
                         <DoctorPortrait doctor={d} className="h-[clamp(240px,38vh,400px)]" />
                       </div>

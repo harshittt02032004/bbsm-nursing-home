@@ -15,7 +15,7 @@ export default function Facilities() {
         <div className="hscroll mt-10 flex snap-x snap-mandatory items-end gap-5 overflow-x-auto px-[clamp(20px,4vw,64px)] pb-6">
           {FACILITIES.map((f) => (
             <figure key={f.caption} className="m-0 w-[78vw] max-w-[380px] shrink-0 snap-center">
-              <div className="relative h-[clamp(260px,52vh,420px)] overflow-hidden">
+              <div className="r-img relative h-[clamp(260px,52vh,420px)]">
                 <Image src={f.src} alt={f.alt} fill sizes="78vw" className="object-cover" />
               </div>
               <figcaption className="meta mt-3.5 text-ink/62">{f.caption}</figcaption>
@@ -44,7 +44,7 @@ function Static() {
       <div className="hscroll mt-14 flex items-end gap-[clamp(20px,3vw,54px)] overflow-x-auto px-[clamp(20px,4vw,64px)] pb-7">
         {FACILITIES.map((f) => (
           <figure key={f.caption} className="m-0 shrink-0" style={{ width: f.w }}>
-            <div className="relative overflow-hidden" style={{ height: f.h }}>
+            <div className="r-img relative" style={{ height: f.h }}>
               <Image src={f.src} alt={f.alt} fill sizes="40vw" className="object-cover" />
             </div>
             <figcaption className="meta mt-3.5 text-ink/62">{f.caption}</figcaption>
@@ -108,7 +108,7 @@ function Item({ f, i, p }: { f: (typeof FACILITIES)[number]; i: number; p: Motio
   const imgX = useTransform(p, [0, 1], ["-6%", "6%"]);
   return (
     <motion.figure className="m-0 shrink-0" style={{ width: f.w, y }}>
-      <div className="relative overflow-hidden" style={{ height: f.h }}>
+      <div className="r-img relative" style={{ height: f.h }}>
         <motion.div className="absolute inset-y-0 -left-[8%] -right-[8%]" style={{ x: imgX }}>
           <Image src={f.src} alt={f.alt} fill sizes="(min-width:1024px) 40vw, 80vw" className="object-cover" />
         </motion.div>

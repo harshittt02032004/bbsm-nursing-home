@@ -12,7 +12,7 @@ export default function MapEmbed() {
       <iframe
         title="BBSM Nursing Home — Hospital in Raebareli on Google Maps"
         src={SITE.mapEmbed}
-        className="h-full min-h-[clamp(360px,58vh,620px)] w-full border border-blue/15 grayscale-[.25]"
+        className="r-img h-full min-h-[clamp(360px,58vh,620px)] w-full border border-blue/15 grayscale-[.25]"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         allowFullScreen
@@ -22,7 +22,7 @@ export default function MapEmbed() {
   return (
     <button
       onClick={() => setOn(true)}
-      className="group relative block h-full min-h-[clamp(360px,58vh,620px)] w-full overflow-hidden text-left"
+      className="r-img group relative block h-full min-h-[clamp(360px,58vh,620px)] w-full text-left"
       aria-label="Load Google Map for BBSM Nursing Home"
     >
       <Image src="/images/exterior-street.jpg" alt="" fill sizes="(min-width: 900px) 46vw, 100vw" className="object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.04]" />

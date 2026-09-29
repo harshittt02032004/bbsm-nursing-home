@@ -38,7 +38,7 @@ export default function ServicesPage() {
                 </span>
                 <span className="text-[14px] font-light leading-relaxed text-ink/65">{s.doctors.join(", ")}</span>
                 <span className={`text-[11px] font-medium uppercase tracking-[0.14em] ${s.timing.startsWith("Last") ? "text-red" : "text-blue"}`}>{s.timing}</span>
-                <span className="relative hidden h-[84px] w-[120px] overflow-hidden md:block">
+                <span className="r-thumb relative hidden h-[84px] w-[120px] md:block">
                   {s.image && (
                     <Image src={s.image} alt="" fill sizes="120px" className="scale-110 object-cover opacity-0 transition-all duration-700 ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-100 group-hover:opacity-100" />
                   )}

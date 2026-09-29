@@ -66,7 +66,7 @@ export default function Expertise() {
             })}
           </ul>
 
-          <div className="sticky top-[110px] hidden self-start lg:block">
+          <div className="sticky top-[100px] hidden self-start lg:block">
             <AnimatePresence mode="wait">
               <motion.div
                 key={spec.slug}
@@ -88,7 +88,7 @@ export default function Expertise() {
 function Panel({ spec, compact = false }: { spec: Speciality; compact?: boolean }) {
   return (
     <>
-      <div className={`ph-dark relative overflow-hidden ${compact ? "h-[240px]" : "h-[clamp(300px,48vh,480px)]"}`}>
+      <div className={`ph-dark r-img relative ${compact ? "h-[240px]" : "h-[clamp(220px,calc(100svh-440px),480px)]"}`}>
         {spec.image && (
           <motion.div className="absolute inset-0" initial={{ scale: 1.08 }} animate={{ scale: 1 }} transition={{ duration: 1.6, ease: EXPO }}>
             <Image src={spec.image} alt={spec.imageAlt} fill sizes="(min-width: 1024px) 46vw, 100vw" className="object-cover opacity-90" />

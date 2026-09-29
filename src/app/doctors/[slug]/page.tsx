@@ -46,7 +46,7 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
             <Breadcrumbs items={[{ href: "/doctors", label: "Doctors" }, { href: `/doctors/${d.slug}`, label: d.name }]} />
           </div>
           <div className="mt-12 grid items-end gap-[clamp(28px,5vw,84px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
-            <div className="a-clip" style={{ animationDelay: ".1s" }}>
+            <div className="a-clip r-img" style={{ animationDelay: ".1s" }}>
               <DoctorPortrait doctor={d} preload className="h-[clamp(380px,66vh,720px)]" />
             </div>
             <div>
@@ -61,14 +61,14 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
                   Daughter of Late Dr. Virendra Singh — continuing his legacy
                 </p>
               )}
-              <dl className="a-rise mt-10 grid gap-px bg-ink/12 sm:grid-cols-2" style={{ animationDelay: ".75s" }}>
+              <dl className="a-rise r-card mt-10 grid gap-px border border-ink/12 bg-ink/12 sm:grid-cols-2" style={{ animationDelay: ".75s" }}>
                 {[
                   ["Availability", d.availability.replace(" | ", " · ")],
                   ["Where", "BBSM Nursing Home, Raebareli"],
                   ...(d.institution ? [["Institution", d.institution]] : []),
                   ["Appointments", SITE.phone],
                 ].map(([k, v]) => (
-                  <div key={k} className="bg-paper py-5 pr-5">
+                  <div key={k} className="bg-paper px-5 py-5">
                     <dt className="text-[10.5px] font-medium uppercase tracking-[0.18em] text-ink/50">{k}</dt>
                     <dd className="m-0 mt-2 text-[15.5px] leading-snug">{v}</dd>
                   </div>

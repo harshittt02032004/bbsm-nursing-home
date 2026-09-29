@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="wrap-inner">
         <div className="grid items-end gap-[clamp(30px,5vw,80px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
           <div>
-            <span className="inline-flex bg-paper px-[22px] py-[18px]">
+            <span className="inline-flex rounded-[var(--radius-img)] bg-paper px-[22px] py-[18px]">
               <Image src="/images/bbsm-logo.png" alt="BBSM Nursing Home — Care You Can Trust" width={100} height={130} className="h-[130px] w-auto" />
             </span>
             <div className="mt-[26px] font-serif leading-none" style={{ fontSize: "clamp(30px,3.4vw,50px)" }}>
@@ -32,7 +32,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="text-[14px] text-white/62">Daily OPD 10:00 AM – 4:00 PM · Super Speciality OPD last Sunday 9:00 AM – 12:00 PM</div>
-            <div className="flex gap-6 text-[13px] uppercase tracking-[0.14em]">
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] uppercase tracking-[0.14em]">
               <a href={SITE.directionsUrl} target="_blank" rel="noopener" className="text-white/80 hover:text-white">Directions ↗</a>
               <a href={SITE.instagram} target="_blank" rel="noopener" className="text-white/80 hover:text-white">Instagram ↗</a>
               <a href={SITE.reviewsUrl} target="_blank" rel="noopener" className="text-white/80 hover:text-white">Google Reviews ↗</a>

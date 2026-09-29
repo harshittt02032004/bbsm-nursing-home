@@ -22,11 +22,12 @@ type Props = {
   mount?: boolean;
 };
 
+const R = "round var(--radius-img)";
 const CLIP = {
-  bottom: "inset(100% 0% 0% 0%)",
-  top: "inset(0% 0% 100% 0%)",
-  left: "inset(0% 100% 0% 0%)",
-  right: "inset(0% 0% 0% 100%)",
+  bottom: `inset(100% 0% 0% 0% ${R})`,
+  top: `inset(0% 0% 100% 0% ${R})`,
+  left: `inset(0% 100% 0% 0% ${R})`,
+  right: `inset(0% 0% 0% 100% ${R})`,
 };
 
 /** Image unmasks with a clip-path wipe while settling from a slight zoom; optional scroll parallax. */
@@ -43,10 +44,10 @@ export default function ImageReveal({
   return (
     <motion.div
       ref={ref}
-      className={`relative overflow-hidden ${className}`}
+      className={`r-img relative ${className}`}
       initial={reduce ? false : "hidden"}
       {...anim}
-      variants={{ hidden: { clipPath: CLIP[from] }, show: { clipPath: "inset(0% 0% 0% 0%)" } }}
+      variants={{ hidden: { clipPath: CLIP[from] }, show: { clipPath: `inset(0% 0% 0% 0% ${R})` } }}
       transition={{ duration: 1.4, ease: EXPO, delay }}
     >
       <motion.div

@@ -58,11 +58,11 @@ export default function FounderPage() {
             <Breadcrumbs dark items={[{ href: "/founder", label: "Founder's Tribute" }]} />
           </div>
           <div className="mt-12 grid items-end gap-[clamp(28px,5vw,84px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
-            <div className="a-fade relative border border-gold/50 bg-[#12181F] p-2.5" style={{ animationDuration: "2s", animationDelay: ".2s" }}>
+            <div className="a-fade relative rounded-[calc(var(--radius-img)+10px)] border border-gold/50 bg-[#12181F] p-2.5" style={{ animationDuration: "2s", animationDelay: ".2s" }}>
               <div
                 role="img"
                 aria-label="Portrait of Late Dr. Virendra Singh — to be supplied"
-                className="relative flex aspect-[4/5] items-end overflow-hidden p-6"
+                className="r-img relative flex aspect-[4/5] items-end p-6"
                 style={{ background: "radial-gradient(120% 90% at 50% 20%, #1f2833 0%, #0f151c 70%)" }}
               >
                 <span aria-hidden className="tribute-glow pointer-events-none absolute left-1/2 top-[38%] h-[60%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full" />

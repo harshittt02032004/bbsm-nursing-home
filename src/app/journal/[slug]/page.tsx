@@ -63,7 +63,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </div>
         </header>
         <div className="a-clip relative mx-auto h-[clamp(280px,56vh,600px)] max-w-[1560px] px-[clamp(20px,4vw,64px)]" style={{ animationDelay: ".3s" }}>
-          <div className="relative h-full w-full overflow-hidden">
+          <div className="r-img relative h-full w-full">
             <Image src={a.image} alt={a.imageAlt} fill preload sizes="100vw" className="a-settle object-cover" style={{ animationDelay: ".3s" }} />
           </div>
         </div>
@@ -88,7 +88,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </Reveal>
             ))}
             <Reveal>
-              <div className="mt-14 border-l-2 border-blue bg-mist px-6 py-6">
+              <div className="r-card mt-14 border-l-2 border-blue bg-mist px-6 py-6">
                 <p className="m-0 text-[14.5px] leading-relaxed text-ink/75">
                   This article is general health information and not a substitute for a consultation. For advice about your own health, call BBSM Nursing Home on{" "}
                   <a href={SITE.phoneHref} className="font-semibold">{SITE.phone}</a>.
@@ -109,7 +109,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="mt-8 grid gap-10 [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
             {others.map((o) => (
               <Link key={o.slug} href={`/journal/${o.slug}`} className="group grid items-center gap-5 text-ink hover:text-ink sm:grid-cols-[180px_1fr]">
-                <div className="relative h-[130px] overflow-hidden">
+                <div className="r-card relative h-[130px]">
                   <Image src={o.image} alt={o.imageAlt} fill sizes="180px" className="object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.06]" />
                 </div>
                 <div>
