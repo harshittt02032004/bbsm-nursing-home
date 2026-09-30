@@ -15,7 +15,7 @@ export default function DoctorPortrait({ doctor, className = "", sizes = "(min-w
   if (doctor.portrait) {
     return (
       <div className={`r-img relative bg-mist ${className}`}>
-        <Image src={doctor.portrait} alt={`${doctor.name}, ${doctor.title} at BBSM Nursing Home, Raebareli`} fill sizes={sizes} preload={preload} className="object-cover object-top" />
+        <Image src={doctor.portrait} alt={`${doctor.name}, ${doctor.title} at BBSM Nursing Home, Raebareli`} fill sizes={sizes} preload={preload} className="object-cover" style={{ objectPosition: doctor.portraitPosition ?? "50% 0%" }} />
       </div>
     );
   }

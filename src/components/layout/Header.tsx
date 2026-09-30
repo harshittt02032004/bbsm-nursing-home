@@ -10,21 +10,23 @@ import { EXPO } from "@/lib/motion";
 import Search from "./Search";
 import { getLenis } from "@/components/motion/SmoothScroll";
 
+const SPRING = "duration-[450ms] ease-[cubic-bezier(.23,1,.32,1)]";
+
+/**
+ * Fixed header. At the top of the page it is a full-width bar under the emergency
+ * strip; once the visitor scrolls it shrinks into a floating glass capsule with a
+ * smaller logo and tighter padding (same behaviour as the Patle and Mannat sites).
+ */
 export default function Header() {
   const pathname = usePathname();
   const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const tribute = pathname === "/founder";
+  const dark = tribute && !scrolled;
 
-  useMotionValueEvent(scrollY, "change", (y) => {
-    const prev = scrollY.getPrevious() ?? 0;
-    setScrolled(y > 40);
-    setHidden(y > 420 && y > prev + 2 && !menu);
-    if (y < prev - 2) setHidden(false);
-  });
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 40));
 
   // Close the menu on navigation (state adjusted during render, not in an effect).
   const [lastPath, setLastPath] = useState(pathname);
@@ -52,16 +54,16 @@ export default function Header() {
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
+  const iconBtn = `grid h-11 w-11 place-items-center rounded-full border transition-[color,border-color,transform] duration-300 ease-[cubic-bezier(.23,1,.32,1)] hover:-translate-y-0.5 hover:border-red hover:text-red active:scale-95 ${
+    dark ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"
+  }`;
+
   return (
     <>
-      <motion.header
-        className="fixed inset-x-0 top-0 z-[60]"
-        animate={{ y: hidden ? "-100%" : "0%" }}
-        transition={{ duration: 0.6, ease: EXPO }}
-      >
-        {/* Emergency strip */}
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-[60]">
+        {/* Emergency strip — folds away once the page is scrolled */}
         <motion.div
-          className="overflow-hidden bg-blue-deep text-white"
+          className="pointer-events-auto overflow-hidden bg-blue-deep text-white"
           animate={{ height: scrolled ? 0 : 36 }}
           initial={false}
           transition={{ duration: 0.5, ease: EXPO }}
@@ -81,72 +83,86 @@ export default function Header() {
           </div>
         </motion.div>
 
-        <div
-          className={`border-b backdrop-blur-[14px] transition-colors duration-500 ${
-            tribute && !scrolled ? "border-white/10 bg-tribute/80" : "border-ink/[.09] bg-paper/[.88]"
-          }`}
-        >
-          <div className="wrap flex h-[82px] items-center gap-8">
-            <Link href="/" className="flex shrink-0 items-center gap-3.5" aria-label="BBSM Nursing Home — Home">
-              <span className={`flex h-[52px] items-center ${tribute && !scrolled ? "rounded-xl bg-paper px-1.5" : ""}`}>
-                <Image src="/images/bbsm-logo.png" alt="BBSM Nursing Home logo" width={36} height={46} className="h-[46px] w-auto" preload />
-              </span>
-              <span className="hidden leading-[1.15] sm:block">
-                <span className={`block text-[15px] font-semibold tracking-[0.02em] ${tribute && !scrolled ? "text-tribute-text" : "text-ink"}`}>BBSM Nursing Home</span>
-                <span className={`mt-[3px] block text-[11px] uppercase tracking-[0.16em] ${tribute && !scrolled ? "text-gold" : "text-blue"}`}>
-                  Hospital in Raebareli · Est. 1981
+        <div className={`transition-[padding] ${SPRING} ${scrolled ? "px-3 sm:px-4" : "px-0"}`}>
+          <div
+            className={`pointer-events-auto mx-auto border transition-[height,max-width,margin,border-radius,background-color,box-shadow,border-color] ${SPRING} ${
+              scrolled
+                ? "mt-3 h-[60px] max-w-[84rem] rounded-full border-ink/10 bg-paper/85 shadow-[0_8px_32px_rgba(6,59,104,0.14)] backdrop-blur-[20px] backdrop-saturate-[1.3]"
+                : dark
+                  ? "mt-0 h-[82px] max-w-[100vw] rounded-none border-transparent border-b-white/10 bg-tribute/80 backdrop-blur-[14px]"
+                  : "mt-0 h-[82px] max-w-[100vw] rounded-none border-transparent border-b-ink/[.09] bg-paper/[.88] backdrop-blur-[14px]"
+            }`}
+            style={{ willChange: "height, max-width, border-radius" }}
+          >
+            <div
+              className={`mx-auto flex h-full max-w-[1560px] items-center gap-6 transition-[padding] ${SPRING} ${
+                scrolled ? "pl-4 pr-2 sm:pl-6 sm:pr-2.5" : "px-[clamp(20px,4vw,64px)]"
+              }`}
+            >
+              <Link href="/" className="group flex shrink-0 items-center gap-3.5" aria-label="BBSM Nursing Home — Home">
+                <span className={`flex items-center ${dark ? "rounded-xl bg-paper px-1.5 py-[3px]" : ""}`}>
+                  <Image
+                    src="/images/bbsm-logo.png"
+                    alt="BBSM Nursing Home logo"
+                    width={36}
+                    height={46}
+                    preload
+                    className={`w-auto transition-[height,transform] ${SPRING} group-hover:scale-[1.04] ${scrolled ? "h-[36px]" : "h-[46px]"}`}
+                  />
                 </span>
-              </span>
-            </Link>
+                <span className="hidden leading-[1.15] sm:block">
+                  <span className={`block text-[15px] font-semibold tracking-[0.02em] ${dark ? "text-tribute-text" : "text-ink"}`}>BBSM Nursing Home</span>
+                  <span
+                    className={`block overflow-hidden text-[11px] uppercase tracking-[0.16em] transition-[max-height,opacity,margin] ${SPRING} ${
+                      scrolled ? "mt-0 max-h-0 opacity-0" : "mt-[3px] max-h-4 opacity-100"
+                    } ${dark ? "text-gold" : "text-blue"}`}
+                  >
+                    Hospital in Raebareli · Est. 1981
+                  </span>
+                </span>
+              </Link>
 
-            <nav className="ml-auto hidden items-center gap-[clamp(14px,1.5vw,28px)] whitespace-nowrap min-[1320px]:flex" aria-label="Main">
-              {NAV.map((n) => (
-                <Link
-                  key={n.href}
-                  href={n.href}
-                  aria-current={isActive(n.href) ? "page" : undefined}
-                  className={`nav-link ${tribute && !scrolled && !isActive(n.href) ? "!text-tribute-text/85" : ""}`}
+              <nav className="ml-auto hidden items-center gap-[clamp(14px,1.5vw,28px)] whitespace-nowrap min-[1320px]:flex" aria-label="Main">
+                {NAV.map((n) => (
+                  <Link
+                    key={n.href}
+                    href={n.href}
+                    aria-current={isActive(n.href) ? "page" : undefined}
+                    className={`nav-link ${dark && !isActive(n.href) ? "!text-tribute-text/85" : ""}`}
+                  >
+                    {n.label}
+                  </Link>
+                ))}
+                <button onClick={() => setSearchOpen(true)} aria-label="Search (Ctrl+K)" className={iconBtn}>
+                  <SearchIcon />
+                </button>
+                <a href={SITE.phoneHref} className="btn-nav">
+                  Book an Appointment <span className="arr" aria-hidden>→</span>
+                </a>
+              </nav>
+
+              <div className="ml-auto flex items-center gap-2 sm:gap-2.5 min-[1320px]:hidden">
+                <button onClick={() => setSearchOpen(true)} aria-label="Search" className={iconBtn}>
+                  <SearchIcon />
+                </button>
+                <a href={SITE.phoneHref} className="btn-nav !px-4 sm:!px-5">
+                  Call
+                </a>
+                <button
+                  onClick={() => setMenu((m) => !m)}
+                  aria-expanded={menu}
+                  aria-controls="mobile-menu"
+                  className={`meta h-11 rounded-full border px-4 !text-[12px] !font-semibold transition-[color,border-color,transform] duration-300 ease-[cubic-bezier(.23,1,.32,1)] hover:-translate-y-0.5 active:scale-95 sm:px-5 ${
+                    dark && !menu ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"
+                  }`}
                 >
-                  {n.label}
-                </Link>
-              ))}
-              <button
-                onClick={() => setSearchOpen(true)}
-                aria-label="Search (Ctrl+K)"
-                className={`grid h-11 w-11 place-items-center rounded-full border transition-colors hover:border-red hover:text-red ${
-                  tribute && !scrolled ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"
-                }`}
-              >
-                <SearchIcon />
-              </button>
-              <a href={SITE.phoneHref} className="btn btn-red !px-5 !py-[15px] !text-[12.5px] !tracking-[0.08em]">
-                Book an Appointment
-              </a>
-            </nav>
-
-            <div className="ml-auto flex items-center gap-2 sm:gap-2.5 min-[1320px]:hidden">
-              <button
-                onClick={() => setSearchOpen(true)}
-                aria-label="Search"
-                className={`grid h-[44px] w-[44px] place-items-center rounded-full border ${tribute && !scrolled ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"}`}
-              >
-                <SearchIcon />
-              </button>
-              <a href={SITE.phoneHref} className="btn btn-red !px-3.5 !py-[15px] !text-[12px] sm:!px-4">
-                Call
-              </a>
-              <button
-                onClick={() => setMenu((m) => !m)}
-                aria-expanded={menu}
-                aria-controls="mobile-menu"
-                className={`meta relative h-[44px] rounded-full border px-4 !text-[12px] sm:px-5 !font-semibold ${tribute && !scrolled && !menu ? "border-white/25 text-tribute-text" : "border-ink/20 text-ink"}`}
-              >
-                {menu ? "Close" : "Menu"}
-              </button>
+                  {menu ? "Close" : "Menu"}
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       <AnimatePresence>
         {menu && (

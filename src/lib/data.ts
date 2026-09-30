@@ -15,6 +15,8 @@ export type Doctor = {
   expertise: string;
   specialities: string[];
   portrait?: string;
+  /** CSS object-position that keeps the face in frame when the photo is cropped */
+  portraitPosition?: string;
 };
 
 export type Speciality = {
@@ -61,6 +63,8 @@ export const DOCTORS: Doctor[] = [
     expertise:
       "Comprehensive eye examinations, cataract evaluation, glaucoma, diabetic retinopathy, dry eyes, eye infections. Surgical eye care.",
     specialities: ["eye-care"],
+    portrait: "/images/dr-shailaja-singh.jpg",
+    portraitPosition: "46% 34%",
   },
   {
     slug: "dr-shivendra-singh",
@@ -419,7 +423,7 @@ export const STATS = [
 
 export const FACILITIES = [
   { caption: "01 / Hospital Exterior", src: "/images/exterior-street.jpg", alt: "BBSM Nursing Home building on Jail Garden Road, Raebareli", w: "clamp(300px,36vw,580px)", h: "clamp(280px,44vh,440px)" },
-  { caption: "02 / Consultation Room", src: "/images/doctor-desk.jpg", alt: "Consultation room at BBSM Nursing Home, Raebareli", w: "clamp(240px,22vw,340px)", h: "clamp(230px,34vh,360px)" },
+  { caption: "02 / Consultation Room", src: "/images/opd-room.jpg", alt: "Consultation room at BBSM Nursing Home, Raebareli", w: "clamp(240px,22vw,340px)", h: "clamp(230px,34vh,360px)" },
   { caption: "03 / I.C.U.", src: "/images/icu.jpg", alt: "ICU at BBSM Nursing Home, Raebareli", w: "clamp(260px,24vw,380px)", h: "clamp(340px,54vh,540px)" },
   { caption: "04 / General Ward", src: "/images/ward-main.jpg", alt: "General ward at BBSM Nursing Home, Raebareli", w: "clamp(320px,38vw,600px)", h: "clamp(300px,46vh,470px)" },
   { caption: "05 / Patient Room", src: "/images/room-private-2.jpg", alt: "Private patient room at BBSM Nursing Home, Raebareli", w: "clamp(230px,22vw,340px)", h: "clamp(280px,42vh,430px)" },

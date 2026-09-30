@@ -108,6 +108,7 @@ html.lenis, html.lenis body { height: auto; }
   .nav-link {
     position: relative; font: 500 13px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--color-ink); padding: 8px 0;
+    transition: color 0.3s, transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
   }
   .nav-link::after {
     content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--color-red);
@@ -115,6 +116,25 @@ html.lenis, html.lenis body { height: auto; }
   }
   .nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
   .nav-link[aria-current="page"] { color: var(--color-red); }
+  .nav-link:hover { transform: translateY(-2px); }
+
+  /* Header CTA — pill that lifts, scales and glows (Patle / Mannat style) */
+  .btn-nav {
+    position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 9px;
+    border-radius: 999px; background: var(--color-red); color: #fff;
+    font: 600 12.5px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 15px 22px; box-shadow: 0 2px 8px rgba(197, 32, 48, 0.18);
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.35s;
+  }
+  .btn-nav::after {
+    content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+  }
+  .btn-nav:hover { color: #fff; background: #ad1b29; transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 24px rgba(197, 32, 48, 0.32); }
+  .btn-nav:hover::after { opacity: 1; }
+  .btn-nav:active { transform: scale(0.98); }
+  .btn-nav .arr { display: inline-block; transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1); }
+  .btn-nav:hover .arr { transform: translateX(4px); }
 
   .hair { border-color: rgba(17, 24, 32, 0.12); }
   .texture-lines { background: repeating-linear-gradient(112deg, rgba(255, 255, 255, 0.035) 0 2px, transparent 2px 9px); }

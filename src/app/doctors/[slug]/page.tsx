@@ -68,7 +68,7 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
                   ...(d.institution ? [["Institution", d.institution]] : []),
                   ["Appointments", SITE.phone],
                 ].map(([k, v]) => (
-                  <div key={k} className="bg-paper px-5 py-5">
+                  <div key={k} className="bg-paper px-5 py-5 sm:last:odd:col-span-2">
                     <dt className="text-[10.5px] font-medium uppercase tracking-[0.18em] text-ink/50">{k}</dt>
                     <dd className="m-0 mt-2 text-[15.5px] leading-snug">{v}</dd>
                   </div>
