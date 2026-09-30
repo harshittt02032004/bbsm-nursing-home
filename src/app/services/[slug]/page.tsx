@@ -62,7 +62,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
               </div>
             </div>
             {s.image && (
-              <ImageReveal src={s.image} alt={s.imageAlt} mount preload parallax={40} sizes="(min-width: 900px) 46vw, 100vw" className="h-[clamp(300px,56vh,600px)]" delay={0.2} />
+              <ImageReveal src={s.image} alt={s.imageAlt} mount preload parallax={40} sizes="(min-width: 900px) 46vw, 100vw" className="h-[clamp(300px,56vh,600px)]" delay={0.2} objectPosition={s.imagePosition} />
             )}
           </div>
         </div>

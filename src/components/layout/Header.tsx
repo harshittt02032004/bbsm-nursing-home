@@ -110,15 +110,17 @@ export default function Header() {
                     height={46}
                     preload
                     className={`w-auto transition-[height,transform] ${SPRING} group-hover:scale-[1.04] ${
-                      scrolled ? "h-[clamp(30px,2.5vw,34px)]" : "h-[clamp(34px,3.1vw,42px)]"
+                      scrolled ? "h-[clamp(34px,3.2vw,38px)]" : "h-[clamp(40px,3.9vw,46px)]"
                     }`}
                   />
                 </span>
-                <span className="hidden leading-[1.15] sm:block lg:max-[1179px]:hidden">
-                  <span className={`block text-[14px] font-semibold tracking-[0.02em] md:text-[15px] ${dark ? "text-tribute-text" : "text-ink"}`}>BBSM Nursing Home</span>
+                <span className="hidden leading-[1.15] sm:block">
+                  <span className="block whitespace-nowrap font-serif text-[clamp(20px,1.85vw,24px)] leading-none">
+                    <span className="text-red">BBSM</span> <span className={dark ? "text-tribute-text" : "text-blue"}>Nursing Home</span>
+                  </span>
                   <span
                     className={`block overflow-hidden text-[10px] uppercase tracking-[0.16em] transition-[max-height,opacity,margin] md:text-[10.5px] lg:max-[1479px]:hidden ${SPRING} ${
-                      scrolled ? "mt-0 max-h-0 opacity-0" : "mt-[2px] max-h-4 opacity-100"
+                      scrolled ? "mt-0 max-h-0 opacity-0" : "mt-[5px] max-h-4 opacity-100"
                     } ${dark ? "text-gold" : "text-blue"}`}
                   >
                     Hospital in Raebareli · Est. 1981
@@ -134,16 +136,22 @@ export default function Header() {
                     aria-current={isActive(n.href) ? "page" : undefined}
                     className={`nav-link ${dark && !isActive(n.href) ? "!text-tribute-text/90" : ""}`}
                   >
-                    {n.label}
+                    {n.href === "/founder" ? (
+                      <>
+                        Founder<span className="max-[1139px]:hidden">&apos;s Tribute</span>
+                      </>
+                    ) : (
+                      n.label
+                    )}
                   </Link>
                 ))}
                 <button onClick={() => setSearchOpen(true)} aria-label="Search (Ctrl+K)" className={`${iconBtn} ml-1.5 shrink-0`}>
                   <SearchIcon />
                 </button>
                 <a href={SITE.phoneHref} className="btn-nav ml-1.5 shrink-0" aria-label="Book an appointment — call BBSM">
-                  <span className="min-[1200px]:hidden">Book Now</span>
-                  <span className="hidden min-[1200px]:inline">Book an Appointment</span>
-                  <span className="arr" aria-hidden>→</span>
+                  <span className="min-[1240px]:hidden">Book Now</span>
+                  <span className="hidden min-[1240px]:inline">Book an Appointment</span>
+                  <span className="arr max-[1099px]:!hidden" aria-hidden>→</span>
                 </a>
               </nav>
 

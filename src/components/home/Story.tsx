@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import ImageReveal from "@/components/motion/ImageReveal";
 import Reveal from "@/components/motion/Reveal";
 import SplitText from "@/components/motion/SplitText";
 import GrowLine from "@/components/motion/GrowLine";
-import Placeholder from "@/components/ui/Placeholder";
 
 export default function Story() {
   return (
@@ -18,7 +18,9 @@ export default function Story() {
             className="h-[clamp(420px,72vh,760px)] ml-[clamp(-64px,-4vw,0px)]"
           />
           <Reveal delay={0.35} className="absolute bottom-0 right-[clamp(-40px,-3vw,0px)] w-[clamp(170px,30%,270px)] rounded-[calc(var(--radius-card)+8px)] bg-paper p-2 shadow-[0_18px_46px_rgba(6,59,104,.16)]">
-            <Placeholder label="Founder portrait" note="Late Dr. Virendra Singh" className="aspect-[4/5] !rounded-[var(--radius-card)] !p-3" />
+            <div className="r-card relative aspect-[4/5]">
+              <Image src="/images/founder-portrait.jpg" alt="Late Dr. Virendra Singh, founder of BBSM Nursing Home, Raebareli" fill sizes="270px" className="object-cover" />
+            </div>
             <div className="px-0.5 pb-0.5 pt-2.5 text-[9.5px] font-medium uppercase tracking-[0.14em] text-blue">Late Dr. Virendra Singh · Founder</div>
           </Reveal>
         </div>

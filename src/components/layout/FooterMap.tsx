@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
  */
 export default function FooterMap() {
   return (
-    <div className="group r-card relative h-[170px] w-full border border-white/15 bg-[#0B4679] lg:h-[138px]">
+    <div className="group pop-card r-card relative h-[170px] w-full border border-white/15 bg-[#0B4679] lg:h-[138px]">
       {/* eslint-disable-next-line @next/next/no-img-element -- static SVG, nothing for the image optimiser to do */}
       <img
         src="/images/bbsm-map.svg"
@@ -39,7 +39,7 @@ export default function FooterMap() {
         aria-label="Get directions to BBSM Nursing Home on Google Maps"
         className="absolute inset-0 flex items-end justify-end p-2.5 text-white hover:text-white"
       >
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-deep/85 px-3 py-[7px] text-[10.5px] font-semibold uppercase leading-none tracking-[0.12em] backdrop-blur-sm transition-colors duration-300 group-hover:bg-red">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-deep/85 px-3 py-[7px] text-[10.5px] font-semibold uppercase leading-none tracking-[0.12em] backdrop-blur-sm transition-[background-color,transform] duration-[400ms] ease-[cubic-bezier(.34,1.56,.64,1)] group-hover:-translate-y-1 group-hover:scale-105 group-hover:bg-red">
           Get Directions <span className="transition-transform duration-300 group-hover:translate-x-0.5">↗</span>
         </span>
       </a>

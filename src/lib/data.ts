@@ -30,6 +30,8 @@ export type Speciality = {
   conditions: string[];
   whenToVisit: string[];
   image?: string;
+  /** CSS object-position for the image when it is cropped */
+  imagePosition?: string;
   imageAlt: string;
   keyword: string;
 };
@@ -79,6 +81,8 @@ export const DOCTORS: Doctor[] = [
     forWhat: "GI cancers, stomach/abdominal oncology surgery, second opinions on cancer diagnosis",
     expertise: "Surgical treatment of cancers of the stomach, intestine, liver, pancreas, and GI tract.",
     specialities: ["oncology"],
+    portrait: "/images/dr-shivendra-singh.jpg",
+    portraitPosition: "58% 5%",
   },
   {
     slug: "dr-preeti-singh",
@@ -106,6 +110,8 @@ export const DOCTORS: Doctor[] = [
     forWhat: "Kidney stones, prostate, urinary issues, blood in urine, urological cancer",
     expertise: "Urological surgery: kidney, bladder, prostate, ureter. Urological oncology.",
     specialities: ["urology", "oncology"],
+    portrait: "/images/dr-amitabh-singh.jpg",
+    portraitPosition: "50% 35%",
   },
   {
     slug: "dr-vineet-talwar",
@@ -133,6 +139,8 @@ export const DOCTORS: Doctor[] = [
     forWhat: "Fever, diabetes, blood pressure, general health, chronic disease",
     expertise: "Fevers, infections, diabetes, hypertension, thyroid, general medical conditions.",
     specialities: ["general-medicine"],
+    portrait: "/images/dr-gyanendra-singh.jpg",
+    portraitPosition: "50% 5%",
   },
   {
     slug: "dr-pranjal-chaurasia",
@@ -159,6 +167,8 @@ export const DOCTORS: Doctor[] = [
     forWhat: "Asthma, COPD, TB, breathlessness, chest infections",
     expertise: "Asthma, COPD, bronchitis, tuberculosis, chest infections, breathlessness.",
     specialities: ["chest-respiratory"],
+    portrait: "/images/dr-amit-raj-sharma.jpg",
+    portraitPosition: "50% 45%",
   },
   {
     slug: "dr-nitish-gupta",
@@ -185,6 +195,8 @@ export const DOCTORS: Doctor[] = [
     forWhat: "Anxiety, depression, sleep disorders, epilepsy, neurological concerns",
     expertise: "Anxiety, depression, OCD, psychosis, bipolar, headaches, sleep disorders, epilepsy.",
     specialities: ["neurology-psychiatry"],
+    portrait: "/images/dr-mahima-mishra.jpg",
+    portraitPosition: "50% 8%",
   },
 ];
 
@@ -288,7 +300,7 @@ export const SPECIALITIES: Speciality[] = [
       "Weak stream, frequent night-time urination or difficulty passing urine",
       "A scan that shows a stone, a growth or an enlarged prostate",
     ],
-    image: "/images/ward-room.jpg",
+    image: "/images/room-recovery.jpg",
     imageAlt: "Recovery room at BBSM Nursing Home, Raebareli",
     keyword: "Urologist in Raebareli",
   },
@@ -348,8 +360,9 @@ export const SPECIALITIES: Speciality[] = [
       "Sudden pain in the lower right abdomen with fever or vomiting",
       "A swelling in the neck, or a thyroid report that needs review",
     ],
-    image: "/images/ward-bay-2.jpg",
-    imageAlt: "Surgical recovery bay at BBSM Nursing Home, Raebareli",
+    image: "/images/surgical-centre-entrance.jpg",
+    imagePosition: "50% 22%",
+    imageAlt: "Entrance to the Dr. Virendra Singh Advance Surgical Centre, a unit of BBSM Nursing Home, Raebareli",
     keyword: "Laparoscopic surgeon in Raebareli",
   },
   {
@@ -423,13 +436,15 @@ export const STATS = [
 
 export const FACILITIES = [
   { caption: "01 / Hospital Exterior", src: "/images/exterior-street.jpg", alt: "BBSM Nursing Home building on Jail Garden Road, Raebareli", w: "clamp(300px,36vw,580px)", h: "clamp(280px,44vh,440px)" },
-  { caption: "02 / Consultation Room", src: "/images/opd-room.jpg", alt: "Consultation room at BBSM Nursing Home, Raebareli", w: "clamp(240px,22vw,340px)", h: "clamp(230px,34vh,360px)" },
-  { caption: "03 / I.C.U.", src: "/images/icu.jpg", alt: "ICU at BBSM Nursing Home, Raebareli", w: "clamp(260px,24vw,380px)", h: "clamp(340px,54vh,540px)" },
-  { caption: "04 / General Ward", src: "/images/ward-main.jpg", alt: "General ward at BBSM Nursing Home, Raebareli", w: "clamp(320px,38vw,600px)", h: "clamp(300px,46vh,470px)" },
-  { caption: "05 / Patient Room", src: "/images/room-private-2.jpg", alt: "Private patient room at BBSM Nursing Home, Raebareli", w: "clamp(230px,22vw,340px)", h: "clamp(280px,42vh,430px)" },
-  { caption: "06 / Eye Diagnostics", src: "/images/consult-eye-2.jpg", alt: "Eye diagnostics at BBSM Nursing Home, Raebareli", w: "clamp(280px,30vw,460px)", h: "clamp(250px,38vh,400px)" },
-  { caption: "07 / Corridors", src: "/images/corridor.jpg", alt: "Clean corridors inside BBSM Nursing Home, Raebareli", w: "clamp(220px,20vw,320px)", h: "clamp(300px,48vh,480px)" },
-  { caption: "08 / Accessible Entry", src: "/images/ramp.jpg", alt: "Wheelchair ramp at BBSM Nursing Home, Raebareli", w: "clamp(240px,24vw,360px)", h: "clamp(280px,44vh,440px)" },
+  { caption: "02 / Advance Surgical Centre", src: "/images/surgical-centre-entrance.jpg", alt: "Entrance to the Dr. Virendra Singh Advance Surgical Centre at BBSM Nursing Home, Raebareli", w: "clamp(230px,22vw,340px)", h: "clamp(320px,50vh,500px)" },
+  { caption: "03 / Consultation Room", src: "/images/opd-room.jpg", alt: "Consultation room at BBSM Nursing Home, Raebareli", w: "clamp(240px,22vw,340px)", h: "clamp(230px,34vh,360px)" },
+  { caption: "04 / I.C.U.", src: "/images/icu.jpg", alt: "ICU at BBSM Nursing Home, Raebareli", w: "clamp(260px,24vw,380px)", h: "clamp(340px,54vh,540px)" },
+  { caption: "05 / General Ward", src: "/images/ward-main.jpg", alt: "General ward at BBSM Nursing Home, Raebareli", w: "clamp(320px,38vw,600px)", h: "clamp(300px,46vh,470px)" },
+  { caption: "06 / Patient Room", src: "/images/room-private-2.jpg", alt: "Private patient room at BBSM Nursing Home, Raebareli", w: "clamp(230px,22vw,340px)", h: "clamp(280px,42vh,430px)" },
+  { caption: "07 / Recovery Room", src: "/images/room-recovery.jpg", alt: "Recovery room with adjustable bed at BBSM Nursing Home, Raebareli", w: "clamp(240px,23vw,350px)", h: "clamp(320px,50vh,500px)" },
+  { caption: "08 / Eye Diagnostics", src: "/images/consult-eye-2.jpg", alt: "Eye diagnostics at BBSM Nursing Home, Raebareli", w: "clamp(280px,30vw,460px)", h: "clamp(250px,38vh,400px)" },
+  { caption: "09 / Corridors", src: "/images/corridor.jpg", alt: "Clean corridors inside BBSM Nursing Home, Raebareli", w: "clamp(220px,20vw,320px)", h: "clamp(300px,48vh,480px)" },
+  { caption: "10 / Accessible Entry", src: "/images/ramp.jpg", alt: "Wheelchair ramp at BBSM Nursing Home, Raebareli", w: "clamp(240px,24vw,360px)", h: "clamp(280px,44vh,440px)" },
 ];
 
 export const WHY = [

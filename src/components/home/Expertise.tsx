@@ -91,7 +91,7 @@ function Panel({ spec, compact = false }: { spec: Speciality; compact?: boolean 
       <div className={`ph-dark r-img relative ${compact ? "h-[240px]" : "h-[clamp(220px,calc(100svh-440px),480px)]"}`}>
         {spec.image && (
           <motion.div className="absolute inset-0" initial={{ scale: 1.08 }} animate={{ scale: 1 }} transition={{ duration: 1.6, ease: EXPO }}>
-            <Image src={spec.image} alt={spec.imageAlt} fill sizes="(min-width: 1024px) 46vw, 100vw" className="object-cover opacity-90" />
+            <Image src={spec.image} alt={spec.imageAlt} fill sizes="(min-width: 1024px) 46vw, 100vw" className="object-cover opacity-90" style={spec.imagePosition ? { objectPosition: spec.imagePosition } : undefined} />
           </motion.div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />

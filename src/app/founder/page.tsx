@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Reveal from "@/components/motion/Reveal";
 import SplitText from "@/components/motion/SplitText";
 import GrowLine from "@/components/motion/GrowLine";
@@ -47,6 +48,7 @@ export default function FounderPage() {
           deathDate: "2021-08-19",
           description: "Founder of BBSM Nursing Home (Brij Bhushan Singh Memorial Nursing Home) — Raebareli's first nursing home, established 1981.",
           url: `${SITE_URL}/founder`,
+          image: `${SITE_URL}/images/founder-portrait.jpg`,
           founder: { "@id": HOSPITAL_ID },
           worksFor: { "@id": HOSPITAL_ID },
         }}
@@ -59,20 +61,15 @@ export default function FounderPage() {
           </div>
           <div className="mt-12 grid items-end gap-[clamp(28px,5vw,84px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
             <div className="a-fade relative rounded-[calc(var(--radius-img)+10px)] border border-gold/50 bg-[#12181F] p-2.5" style={{ animationDuration: "2s", animationDelay: ".2s" }}>
-              <div
-                role="img"
-                aria-label="Portrait of Late Dr. Virendra Singh — to be supplied"
-                className="r-img relative flex aspect-[4/5] items-end p-6"
-                style={{ background: "radial-gradient(120% 90% at 50% 20%, #1f2833 0%, #0f151c 70%)" }}
-              >
-                <span aria-hidden className="tribute-glow pointer-events-none absolute left-1/2 top-[38%] h-[60%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full" />
-                <span aria-hidden className="pointer-events-none absolute inset-0 grid place-items-center font-deva text-[clamp(90px,12vw,170px)] text-gold/[.08]">वी</span>
-                <div className="relative text-[10.5px] font-medium uppercase leading-[1.7] tracking-[0.16em] text-gold/80">
-                  <span className="block text-gold">■</span>
-                  Portrait — Late Dr. Virendra Singh
-                  <br />
-                  Gold frame · Client to supply
-                </div>
+              <div className="r-img relative aspect-[4/5]">
+                <Image
+                  src="/images/founder-portrait.jpg"
+                  alt="Late Dr. Virendra Singh — Civil Surgeon and founder of BBSM Nursing Home, Raebareli"
+                  fill
+                  preload
+                  sizes="(min-width: 900px) 46vw, 100vw"
+                  className="object-cover"
+                />
               </div>
             </div>
             <div>
