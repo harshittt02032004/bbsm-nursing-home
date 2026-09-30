@@ -36,7 +36,7 @@ const CHAPTERS = [
 
 export default function FounderPage() {
   return (
-    <div className="-mt-[118px] bg-tribute pt-[118px] text-tribute-text">
+    <div className="-mt-[var(--header-h)] bg-tribute pt-[var(--header-h)] text-tribute-text">
       <JsonLd
         data={{
           "@context": "https://schema.org",

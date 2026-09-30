@@ -2,17 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV, SITE } from "@/lib/site";
 import { SPECIALITIES } from "@/lib/data";
+import FooterMap from "./FooterMap";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[.14] bg-blue-deep px-[clamp(20px,4vw,64px)] pb-24 pt-[clamp(40px,6vh,64px)] text-white min-[1320px]:pb-7">
+    <footer className="border-t border-white/[.14] bg-blue-deep px-[clamp(20px,4vw,64px)] pb-24 pt-[clamp(40px,6vh,64px)] text-white lg:pb-7">
       <div className="wrap-inner">
-        <div className="grid items-center gap-x-[clamp(30px,5vw,80px)] gap-y-8 [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
+        <div className="grid items-center gap-x-[clamp(28px,3.6vw,64px)] gap-y-8 md:grid-cols-2 lg:grid-cols-[auto_minmax(0,1fr)_clamp(250px,27vw,380px)]">
           <div className="flex items-center gap-5">
             <span className="inline-flex shrink-0 rounded-[var(--radius-card)] bg-paper px-3.5 py-3">
-              <Image src="/images/bbsm-logo.png" alt="BBSM Nursing Home — Care You Can Trust" width={62} height={80} className="h-[80px] w-auto" />
+              <Image src="/images/bbsm-logo.png" alt="BBSM Nursing Home — Care You Can Trust" width={62} height={80} className="h-[clamp(64px,6vw,80px)] w-auto" />
             </span>
-            <div className="font-serif leading-[1.02]" style={{ fontSize: "clamp(26px,2.6vw,38px)" }}>
+            <div className="font-serif leading-[1.02] lg:max-w-[7.5ch] min-[1480px]:max-w-none" style={{ fontSize: "clamp(26px,2.4vw,36px)" }}>
               Care You Can Trust.
             </div>
           </div>
@@ -31,10 +32,12 @@ export default function Footer() {
             </div>
             <div className="text-[13.5px] text-white/62">Daily OPD 10:00 AM – 4:00 PM · Super Speciality OPD last Sunday 9:00 AM – 12:00 PM</div>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-[12.5px] uppercase tracking-[0.14em]">
-              <a href={SITE.directionsUrl} target="_blank" rel="noopener" className="text-white/80 hover:text-white">Directions ↗</a>
               <a href={SITE.instagram} target="_blank" rel="noopener" className="text-white/80 hover:text-white">Instagram ↗</a>
               <a href={SITE.reviewsUrl} target="_blank" rel="noopener" className="text-white/80 hover:text-white">Google Reviews ↗</a>
             </div>
+          </div>
+          <div className="md:col-span-2 lg:col-span-1">
+            <FooterMap />
           </div>
         </div>
 
@@ -51,7 +54,7 @@ export default function Footer() {
           </div>
           <div>
             <div className="meta mb-3 text-white/45" style={{ fontSize: 11 }}>Specialities in Raebareli</div>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-[14px] font-light xl:grid-cols-3">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-[14px] font-light lg:grid-cols-3">
               {SPECIALITIES.map((s) => (
                 <li key={s.slug}>
                   <Link href={`/services/${s.slug}`} className="text-white/75 hover:text-white">{s.name}</Link>

@@ -55,7 +55,7 @@ export default function DoctorsPreview() {
             })}
           </ul>
 
-          <div className="sticky top-[100px] self-start">
+          <div className="sticky top-[84px] self-start">
             <AnimatePresence mode="wait">
               <motion.div key={doc.slug} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.42, ease: "easeOut" }}>
                 <motion.div initial={{ clipPath: "inset(0 0 12% 0 round var(--radius-img))" }} animate={{ clipPath: "inset(0 0 0% 0 round var(--radius-img))" }} transition={{ duration: 0.9, ease: EXPO }}>

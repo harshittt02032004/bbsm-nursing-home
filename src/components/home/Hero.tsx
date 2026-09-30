@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#0B2E4E] lg:min-h-[calc(100svh-118px)]">
+    <section className="relative isolate overflow-hidden bg-[#0B2E4E] lg:min-h-[calc(100svh-var(--header-h))]">
       <div className="absolute inset-0 -z-20" style={{ background: "linear-gradient(122deg,#07518B 0%,#063B68 44%,#0B2233 100%)" }} />
       <div className="texture-lines absolute inset-0 -z-10" />
 
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(6,34,51,.25) 0%, rgba(6,40,70,.72) 42%, rgba(8,30,48,.96) 78%)" }} />
       </div>
 
-      <div className="wrap relative grid min-h-[calc(100svh-118px)] items-end gap-[clamp(24px,4vw,64px)] pb-[clamp(40px,7vh,90px)] pt-[clamp(48px,9vh,130px)] lg:grid-cols-2 lg:min-h-0">
+      <div className="wrap relative grid min-h-[calc(100svh-var(--header-h))] items-end gap-[clamp(24px,4vw,64px)] pb-[clamp(40px,7vh,90px)] pt-[clamp(48px,9vh,130px)] lg:grid-cols-2 lg:min-h-0">
         <div className="flex flex-col justify-end gap-[clamp(20px,2.6vh,34px)] pt-[14vh] lg:pt-0">
           <div className="a-fade" style={{ animationDelay: "0.9s" }}>
             <div className="flex items-center gap-3.5">

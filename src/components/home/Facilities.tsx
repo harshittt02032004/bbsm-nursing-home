@@ -82,7 +82,7 @@ function Pinned() {
 
   return (
     <div ref={section} style={{ height: `calc(100vh + ${distance}px)` }} className="relative">
-      <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden pt-[82px]">
+      <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden pt-[66px]">
         <Header />
         <motion.div ref={track} style={{ x }} className="mt-[clamp(28px,5vh,56px)] flex w-max items-end gap-[clamp(20px,3vw,54px)] px-[clamp(20px,4vw,64px)]">
           {FACILITIES.map((f, i) => (

@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SmoothScroll />
           <ScrollProgress />
           <Header />
-          <main id="main" className="pt-[118px]">
+          <main id="main" className="pt-[var(--header-h)]">
             {children}
           </main>
           <CtaBand />

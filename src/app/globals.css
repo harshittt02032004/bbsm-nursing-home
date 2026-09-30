@@ -105,25 +105,24 @@ html.lenis, html.lenis body { height: auto; }
   .link-u .arr { transition: transform 0.5s var(--ease-expo); }
   .link-u:hover .arr { transform: translateX(6px); }
 
+  /* Header nav items — pill buttons: tint + lift on hover, tinted red when current */
   .nav-link {
-    position: relative; font: 500 13px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--color-ink); padding: 8px 0;
-    transition: color 0.3s, transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    display: inline-flex; align-items: center; height: 36px; padding: 0 clamp(8px, 0.8vw, 14px);
+    border-radius: 999px; white-space: nowrap;
+    font: 500 clamp(11.5px, 0.95vw, 13px)/1 var(--font-sans); letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--color-ink);
+    transition: color 0.3s, background-color 0.3s, transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .nav-link::after {
-    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--color-red);
-    transform: scaleX(0); transform-origin: right; transition: transform 0.5s var(--ease-expo);
-  }
-  .nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
-  .nav-link[aria-current="page"] { color: var(--color-red); }
-  .nav-link:hover { transform: translateY(-2px); }
+  .nav-link:hover { color: inherit; background: color-mix(in srgb, currentColor 8%, transparent); transform: translateY(-2px); }
+  .nav-link:active { transform: scale(0.97); }
+  .nav-link[aria-current="page"], .nav-link[aria-current="page"]:hover { color: var(--color-red); background: rgba(197, 32, 48, 0.09); }
 
   /* Header CTA — pill that lifts, scales and glows (Patle / Mannat style) */
   .btn-nav {
     position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 9px;
     border-radius: 999px; background: var(--color-red); color: #fff;
     font: 600 12.5px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 15px 22px; box-shadow: 0 2px 8px rgba(197, 32, 48, 0.18);
+    height: 40px; padding: 0 20px; white-space: nowrap; box-shadow: 0 2px 8px rgba(197, 32, 48, 0.18);
     transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.35s;
   }
   .btn-nav::after {
@@ -202,3 +201,11 @@ html.lenis, html.lenis body { height: auto; }
 @media (max-width: 420px) {
   .btn { padding: 17px 22px; font-size: 12.5px; letter-spacing: 0.08em; gap: 10px; }
 }
+
+/* Height of the fixed header at rest: emergency strip (28px) + bar (60px, 66px from md) */
+:root { --header-h: 88px; }
+@media (min-width: 768px) { :root { --header-h: 94px; } }
+
+/* Footer map pin pulse */
+@keyframes mapPulse { 0% { transform: scale(0.6); opacity: 0.9; } 100% { transform: scale(3.2); opacity: 0; } }
+.map-pulse { animation: mapPulse 2.2s ease-out infinite; }

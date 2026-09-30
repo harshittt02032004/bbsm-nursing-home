@@ -66,7 +66,7 @@ export default function Expertise() {
             })}
           </ul>
 
-          <div className="sticky top-[100px] hidden self-start lg:block">
+          <div className="sticky top-[84px] hidden self-start lg:block">
             <AnimatePresence mode="wait">
               <motion.div
                 key={spec.slug}
