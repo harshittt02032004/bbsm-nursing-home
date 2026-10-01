@@ -82,7 +82,7 @@ export const DOCTORS: Doctor[] = [
     expertise: "Surgical treatment of cancers of the stomach, intestine, liver, pancreas, and GI tract.",
     specialities: ["oncology"],
     portrait: "/images/dr-shivendra-singh.jpg",
-    portraitPosition: "58% 5%",
+    portraitPosition: "35% 8%",
   },
   {
     slug: "dr-preeti-singh",
@@ -96,6 +96,8 @@ export const DOCTORS: Doctor[] = [
     forWhat: "IVF, infertility, irregular periods, pregnancy care, gynaecological concerns",
     expertise: "IVF, infertility evaluation, high-risk pregnancies, antenatal care, gynaecological procedures.",
     specialities: ["gynaecology-ivf"],
+    portrait: "/images/dr-preeti-singh.jpg",
+    portraitPosition: "50% 8%",
   },
   {
     slug: "dr-amitabh-singh",
@@ -140,7 +142,7 @@ export const DOCTORS: Doctor[] = [
     expertise: "Fevers, infections, diabetes, hypertension, thyroid, general medical conditions.",
     specialities: ["general-medicine"],
     portrait: "/images/dr-gyanendra-singh.jpg",
-    portraitPosition: "50% 5%",
+    portraitPosition: "50% 8%",
   },
   {
     slug: "dr-pranjal-chaurasia",
