@@ -5,6 +5,7 @@ import ImageReveal from "@/components/motion/ImageReveal";
 import Reveal from "@/components/motion/Reveal";
 import SplitText from "@/components/motion/SplitText";
 import CountUp from "@/components/motion/CountUp";
+import FounderQuote from "@/components/about/FounderQuote";
 import { STATS } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -65,6 +66,16 @@ export default function AboutPage() {
           />
         </div>
       </section>
+
+      {/* Founder quote — written word by word on scroll */}
+      <div className="bg-mist pt-[clamp(48px,8vh,96px)]">
+        <section aria-label="Founder's quote" className="bg-blue-deep px-5 py-16 md:px-[clamp(64px,8.4vw,160px)] md:py-24">
+          <noscript>
+            <style>{`.fq-word,.fq-fade{opacity:1!important}.fq-line{width:120px!important}`}</style>
+          </noscript>
+          <FounderQuote />
+        </section>
+      </div>
 
       <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(70px,11vh,140px)]">
         <div className="wrap-inner grid gap-[clamp(28px,4vw,72px)] [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">

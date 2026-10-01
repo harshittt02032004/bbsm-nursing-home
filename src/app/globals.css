@@ -175,6 +175,9 @@ html.lenis, html.lenis body { height: auto; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  /* Founder quote (About): no scroll-written reveal, everything shown in full */
+  .fq-word, .fq-fade { opacity: 1 !important; }
+  .fq-line { width: 120px !important; }
 }
 
 /* First-paint entrance animations (CSS, so they run before hydration and don't delay LCP) */
