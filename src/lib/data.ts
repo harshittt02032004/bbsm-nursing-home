@@ -113,7 +113,7 @@ export const DOCTORS: Doctor[] = [
     expertise: "Urological surgery: kidney, bladder, prostate, ureter. Urological oncology.",
     specialities: ["urology", "oncology"],
     portrait: "/images/dr-amitabh-singh.jpg",
-    portraitPosition: "50% 35%",
+    portraitPosition: "50% 15%",
   },
   {
     slug: "dr-vineet-talwar",
