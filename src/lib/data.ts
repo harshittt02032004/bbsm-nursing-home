@@ -367,9 +367,9 @@ export const SPECIALITIES: Speciality[] = [
       "Sudden pain in the lower right abdomen with fever or vomiting",
       "A swelling in the neck, or a thyroid report that needs review",
     ],
-    image: "/images/surgical-centre-entrance.jpg",
-    imagePosition: "50% 22%",
-    imageAlt: "Entrance to the Dr. Virendra Singh Advance Surgical Centre, a unit of BBSM Nursing Home, Raebareli",
+    image: "/images/care-laparoscopic.jpg",
+    imagePosition: "50% 35%",
+    imageAlt: "Representative image: two surgeons performing a laparoscopic (keyhole) operation while watching the monitor",
     keyword: "Laparoscopic surgeon in Raebareli",
   },
   {
