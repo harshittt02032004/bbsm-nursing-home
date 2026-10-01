@@ -170,7 +170,7 @@ export const DOCTORS: Doctor[] = [
     expertise: "Asthma, COPD, bronchitis, tuberculosis, chest infections, breathlessness.",
     specialities: ["chest-respiratory"],
     portrait: "/images/dr-amit-raj-sharma.jpg",
-    portraitPosition: "50% 45%",
+    portraitPosition: "50% 8%",
   },
   {
     slug: "dr-nitish-gupta",
