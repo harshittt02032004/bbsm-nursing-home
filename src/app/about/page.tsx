@@ -3,9 +3,9 @@ import Link from "next/link";
 import PageIntro from "@/components/ui/PageIntro";
 import ImageReveal from "@/components/motion/ImageReveal";
 import Reveal from "@/components/motion/Reveal";
-import SplitText from "@/components/motion/SplitText";
 import CountUp from "@/components/motion/CountUp";
 import FounderQuote from "@/components/about/FounderQuote";
+import Lifeline from "@/components/about/Lifeline";
 import { STATS } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -88,19 +88,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline — the one new composition on this page */}
-      <section className="bg-ink px-[clamp(20px,4vw,64px)] py-[clamp(80px,13vh,160px)] text-white">
-        <div className="wrap-inner">
-          <SplitText parts={["Four decades,", { t: "one address.", className: "text-red" }]} className="t-h2 m-0 max-w-[16ch]" />
-          <ol className="mt-[clamp(44px,7vh,84px)] grid gap-px bg-white/10 [grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))]">
-            {TIMELINE.map((t, i) => (
-              <Reveal as="li" key={t.y} delay={i * 0.12} className="bg-ink px-[26px] pb-10 pt-8">
-                <div className="font-serif leading-none text-white" style={{ fontSize: "clamp(44px,4.6vw,72px)" }}>{t.y}</div>
-                <p className="mt-5 max-w-[30ch] text-[15px] font-light leading-relaxed text-white/68">{t.t}</p>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
+      {/* Timeline — a "lifeline": the ECG line draws with the scroll, each milestone appears as it passes */}
+      <section aria-label="Timeline" className="bg-white px-5 py-14 md:px-[clamp(40px,6.67vw,96px)] md:py-20">
+        <noscript>
+          <style>{`.ll-item{opacity:1!important;transform:none!important}.ll-line,.ll-dot{stroke-dashoffset:0!important;opacity:1!important}.ll-rail{transform:none!important}`}</style>
+        </noscript>
+        <Lifeline items={TIMELINE} />
       </section>
 
       <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(60px,10vh,120px)]">
