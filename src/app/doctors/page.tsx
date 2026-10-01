@@ -55,11 +55,11 @@ export default function DoctorsPage() {
                 <p className="mt-[18px] max-w-[70ch] text-[15.5px] font-light leading-[1.7] text-ink/70">{g.note}</p>
               </Reveal>
               {DOCTORS.filter((d) => d.group === g.key).map((d) => (
-                <article key={d.slug} className="grid gap-[clamp(20px,3vw,56px)] border-b border-ink/11 py-[clamp(30px,5vh,56px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
+                <article key={d.slug} className="grid gap-[clamp(20px,3vw,56px)] border-b border-ink/11 py-[clamp(30px,5vh,56px)] md:[grid-template-columns:minmax(0,clamp(220px,26vw,340px))_minmax(0,1fr)]">
                   <Reveal>
-                    <Link href={`/doctors/${d.slug}`} aria-label={`${d.name} — profile`} className="r-img group block">
+                    <Link href={`/doctors/${d.slug}`} aria-label={`${d.name} — profile`} className="r-img group block max-w-[340px]">
                       <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.03]">
-                        <DoctorPortrait doctor={d} className="h-[clamp(240px,38vh,400px)]" />
+                        <DoctorPortrait doctor={d} className="aspect-[4/5]" sizes="(min-width: 768px) 340px, 100vw" />
                       </div>
                     </Link>
                   </Reveal>

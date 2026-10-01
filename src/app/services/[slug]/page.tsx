@@ -113,7 +113,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
                 <Link href={`/doctors/${d!.slug}`} className="group block text-ink hover:text-ink">
                   <div className="r-img">
                     <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.03]">
-                      <DoctorPortrait doctor={d!} className="h-[380px]" sizes="(min-width: 900px) 30vw, 100vw" />
+                      <DoctorPortrait doctor={d!} className="aspect-[4/5]" sizes="(min-width: 900px) 30vw, 100vw" />
                     </div>
                   </div>
                   <div className="mt-5 font-serif text-[30px] leading-[1.05] transition-colors group-hover:text-red">{d!.name}</div>

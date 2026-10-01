@@ -66,7 +66,7 @@ export const DOCTORS: Doctor[] = [
       "Comprehensive eye examinations, cataract evaluation, glaucoma, diabetic retinopathy, dry eyes, eye infections. Surgical eye care.",
     specialities: ["eye-care"],
     portrait: "/images/dr-shailaja-singh.jpg",
-    portraitPosition: "46% 34%",
+    portraitPosition: "50% 20%",
   },
   {
     slug: "dr-shivendra-singh",

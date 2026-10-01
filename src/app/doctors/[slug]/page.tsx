@@ -45,9 +45,9 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
           <div className="a-fade">
             <Breadcrumbs items={[{ href: "/doctors", label: "Doctors" }, { href: `/doctors/${d.slug}`, label: d.name }]} />
           </div>
-          <div className="mt-12 grid items-end gap-[clamp(28px,5vw,84px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
-            <div className="a-clip r-img" style={{ animationDelay: ".1s" }}>
-              <DoctorPortrait doctor={d} preload className="h-[clamp(380px,66vh,720px)]" />
+          <div className="mt-12 grid items-end gap-[clamp(28px,5vw,84px)] md:[grid-template-columns:minmax(0,min(42%,52svh,480px))_minmax(0,1fr)]">
+            <div className="a-clip r-img max-w-[480px]" style={{ animationDelay: ".1s" }}>
+              <DoctorPortrait doctor={d} preload className="aspect-[4/5]" sizes="(min-width: 768px) 480px, 100vw" />
             </div>
             <div>
               <div className="a-fade text-[11.5px] font-medium uppercase tracking-[0.2em]" style={{ color: accent, animationDelay: ".2s" }}>
