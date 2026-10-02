@@ -20,7 +20,7 @@ export function hospitalSchema() {
     name: SITE.name,
     alternateName: [SITE.legalName, SITE.alsoKnownAs, "BBSM Hospital Raebareli", SITE.hindiName],
     description:
-      "BBSM Nursing Home (Brij Bhushan Singh Memorial Nursing Home) is a hospital in Raebareli, Uttar Pradesh — established in 1981 as Raebareli's first nursing home by Late Dr. Virendra Singh.",
+      "BBSM Nursing Home (Brij Bhushan Singh Memorial Nursing Home) is a hospital in Raebareli, Uttar Pradesh — established in 1983 as Raebareli's first nursing home by Late Dr. Virendra Singh.",
     url: SITE_URL,
     logo: `${SITE_URL}/images/bbsm-logo.png`,
     image: [`${SITE_URL}/images/exterior-hero.jpg`, `${SITE_URL}/images/exterior-street.jpg`, `${SITE_URL}/images/ward-main.jpg`],

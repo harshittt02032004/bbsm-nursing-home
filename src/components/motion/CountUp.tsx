@@ -7,7 +7,7 @@ export default function CountUp({ to, suffix = "", duration = 2.2 }: { to: numbe
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
   const reduce = useReducedMotion();
-  // Years (e.g. 1981) count up from a nearby value so they don't spin through thousands.
+  // Years (e.g. 1983) count up from a nearby value so they don't spin through thousands.
   const start = to > 1000 ? to - 60 : 0;
   const [val, setVal] = useState(start);
 

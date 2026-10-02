@@ -89,7 +89,7 @@ function Pinned() {
             <Item key={f.caption} f={f} i={i} p={smooth} />
           ))}
           <div className="flex w-[clamp(260px,24vw,380px)] shrink-0 flex-col justify-end pb-10 pl-4">
-            <p className="font-serif text-[clamp(26px,2.6vw,38px)] leading-[1.15] text-ink">Built in 1981. Cared for every day since.</p>
+            <p className="font-serif text-[clamp(26px,2.6vw,38px)] leading-[1.15] text-ink">Built in 1983. Cared for every day since.</p>
             <p className="mt-4 text-[14px] font-light leading-relaxed text-ink/60">A 7/7, Jail Garden Road, Indira Nagar — minutes from the heart of Raebareli.</p>
           </div>
         </motion.div>

@@ -6,7 +6,7 @@ export const SITE = {
   alsoKnownAs: "Dr. Virendra Singh Advance Surgical Centre",
   hindiName: "बृज भूषण सिंह मेमोरियल नर्सिंग होम",
   tagline: "Care You Can Trust",
-  founded: 1981,
+  founded: 1983,
   phone: "+91 96166 06051",
   phoneHref: "tel:+919616606051",
   emergency: "+91 99364 60525",

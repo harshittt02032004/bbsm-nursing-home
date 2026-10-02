@@ -123,7 +123,7 @@ export default function Header() {
                       scrolled ? "mt-0 max-h-0 opacity-0" : "mt-[5px] max-h-4 opacity-100"
                     } ${dark ? "text-gold" : "text-blue"}`}
                   >
-                    Hospital in Raebareli · Est. 1981
+                    Hospital in Raebareli · Est. 1983
                   </span>
                 </span>
               </Link>

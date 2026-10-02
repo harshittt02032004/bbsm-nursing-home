@@ -18,11 +18,11 @@ const deva = Noto_Serif_Devanagari({ subsets: ["devanagari"], weight: ["400", "6
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "BBSM Nursing Home | Best Hospital in Raebareli | Est. 1981 | Brij Bhushan Singh Memorial",
+    default: "BBSM Nursing Home | Best Hospital in Raebareli | Est. 1983 | Brij Bhushan Singh Memorial",
     template: "%s | BBSM Nursing Home Raebareli",
   },
   description:
-    "BBSM Nursing Home — the most trusted hospital in Raebareli since 1981. Daily OPD for orthopaedics and eye care. Super Speciality OPD every last Sunday with oncologists, IVF specialists, and uro-surgeons from Rajiv Gandhi Cancer Institute, New Delhi. Call +91 96166 06051.",
+    "BBSM Nursing Home — the most trusted hospital in Raebareli since 1983. Daily OPD for orthopaedics and eye care. Super Speciality OPD every last Sunday with oncologists, IVF specialists, and uro-surgeons from Rajiv Gandhi Cancer Institute, New Delhi. Call +91 96166 06051.",
   keywords: ["hospital in Raebareli", "best hospital Raebareli", "BBSM Nursing Home", "Brij Bhushan Singh Memorial Nursing Home", "nursing home Raebareli"],
   applicationName: SITE.name,
   alternates: { canonical: "/" },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     siteName: SITE.name,
     url: "/",
-    title: "BBSM Nursing Home — Care You Can Trust | Hospital in Raebareli since 1981",
+    title: "BBSM Nursing Home — Care You Can Trust | Hospital in Raebareli since 1983",
     description: "Raebareli's first nursing home. 11 specialists, daily OPD and a monthly Super Speciality OPD with Delhi specialists.",
   },
   twitter: { card: "summary_large_image" },

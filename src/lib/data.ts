@@ -440,7 +440,7 @@ export const STATS = [
   { n: 49, suffix: "", label: "Years of Service" },
   { n: 11, suffix: "", label: "Specialist Doctors" },
   { n: 10, suffix: "+", label: "Specialities" },
-  { n: 1981, suffix: "", label: "When It All Began" },
+  { n: 1983, suffix: "", label: "When It All Began" },
 ];
 
 export const FACILITIES = [
@@ -457,7 +457,7 @@ export const FACILITIES = [
 ];
 
 export const WHY = [
-  { title: "Legacy.", body: "Raebareli's first nursing home, built in 1981 by Late Dr. Virendra Singh." },
+  { title: "Legacy.", body: "Raebareli's first nursing home, built in 1983 by Late Dr. Virendra Singh." },
   { title: "Expertise.", body: "11 specialists. 10+ disciplines. Super-specialists from Rajiv Gandhi Cancer Institute, New Delhi." },
   { title: "Access.", body: "Delhi-level care in Raebareli — every last Sunday of the month." },
   { title: "Continuity.", body: "9 family doctors carrying one institution's values across generations." },

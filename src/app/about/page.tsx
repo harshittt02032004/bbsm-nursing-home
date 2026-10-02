@@ -9,9 +9,9 @@ import Lifeline from "@/components/about/Lifeline";
 import { STATS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: { absolute: "About BBSM | Raebareli's First Hospital Since 1981 | Brij Bhushan Singh Memorial Nursing Home" },
+  title: { absolute: "About BBSM | Raebareli's First Hospital Since 1983 | Brij Bhushan Singh Memorial Nursing Home" },
   description:
-    "BBSM Nursing Home — Raebareli's first nursing home and hospital, founded in 1981 by Late Dr. Virendra Singh. 49 years of service to Raebareli and surrounding districts. 9 family doctors carrying the legacy forward.",
+    "BBSM Nursing Home — Raebareli's first nursing home and hospital, founded in 1983 by Late Dr. Virendra Singh. 49 years of service to Raebareli and surrounding districts. 9 family doctors carrying the legacy forward.",
   keywords: ["hospital in Raebareli history", "Raebareli first nursing home", "BBSM about", "Dr Virendra Singh founder"],
   alternates: { canonical: "/about" },
 };
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const CHAPTERS = [
   {
     k: "The Beginning — 1972",
-    t: "In 1972, a young Civil Surgeon named Dr. Virendra Singh came to Raebareli. He found a city where families had no nursing home. In 1981, he established the city's first ever hospital — Brij Bhushan Singh Memorial Nursing Home — Raebareli's very first nursing home. He turned no one away.",
+    t: "In 1972, a young Civil Surgeon named Dr. Virendra Singh came to Raebareli. He found a city where families had no nursing home. In 1983, he established the city's first ever hospital — Brij Bhushan Singh Memorial Nursing Home — Raebareli's very first nursing home. He turned no one away.",
   },
   {
     k: "49 Years of Uninterrupted Service",
@@ -37,7 +37,7 @@ const CHAPTERS = [
 
 const TIMELINE = [
   { y: "1972", t: "Dr. Virendra Singh arrives in Raebareli as Civil Surgeon." },
-  { y: "1981", t: "Brij Bhushan Singh Memorial Nursing Home opens — the city's first." },
+  { y: "1983", t: "Brij Bhushan Singh Memorial Nursing Home opens — the city's first." },
   { y: "2021", t: "18 August: his last patient. 19 August: he leaves us, still serving." },
   { y: "Today", t: "Dr. Virendra Singh Advance Surgical Centre — 11 specialists, one address." },
 ];

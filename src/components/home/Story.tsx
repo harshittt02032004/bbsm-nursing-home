@@ -12,7 +12,7 @@ export default function Story() {
         <div className="relative pb-14">
           <ImageReveal
             src="/images/exterior-front.jpg"
-            alt="The BBSM Nursing Home building on Jail Garden Road, Raebareli — Raebareli's first nursing home, est. 1981"
+            alt="The BBSM Nursing Home building on Jail Garden Road, Raebareli — Raebareli's first nursing home, est. 1983"
             parallax={50}
             sizes="(min-width: 900px) 46vw, 100vw"
             className="h-[clamp(420px,72vh,760px)] ml-[clamp(-64px,-4vw,0px)]"
@@ -34,7 +34,7 @@ export default function Story() {
             <GrowLine className="w-[2px] shrink-0 bg-red" />
             <Reveal delay={0.15} className="body-lg flex max-w-[56ch] flex-col gap-[22px] text-ink/88">
               <p className="m-0">
-                In 1972, Late Dr. Virendra Singh arrived in Raebareli as a Civil Surgeon. He saw a city with no nursing home. In 1981, he changed that forever — building Raebareli&apos;s first and most trusted nursing home.
+                In 1972, Late Dr. Virendra Singh arrived in Raebareli as a Civil Surgeon. He saw a city with no nursing home. In 1983, he changed that forever — building Raebareli&apos;s first and most trusted nursing home.
               </p>
               <p className="m-0">
                 He served 49 years. He operated at 76 years of age. He saw his last patient on 18th August 2021 and left us that evening on 19th August. He believed: &ldquo;A Doctor Never Retires.&rdquo;

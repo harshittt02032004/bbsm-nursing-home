@@ -76,7 +76,7 @@ export default function FounderQuote() {
         ))}
       </p>
       <motion.figcaption className="fq-fade font-sans text-[14px] uppercase tracking-[0.14em] text-[#A9C2DA]" style={{ opacity: captionOpacity }}>
-        Late Dr. Virendra Singh · Founder, 1981
+        Late Dr. Virendra Singh · Founder, 1983
       </motion.figcaption>
     </figure>
   );

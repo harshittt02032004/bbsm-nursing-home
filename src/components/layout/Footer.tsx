@@ -15,7 +15,7 @@ const CONTACT: { label: string; value: string; href?: string; icon: IconName }[]
   { label: "Super Speciality OPD", value: "Last Sunday, 9 AM – 12 PM", icon: "calendar" },
 ];
 
-const TICKER = ["Care You Can Trust", "Raebareli's First Nursing Home", "Est. 1981", "11 Specialists", "24×7 Emergency", "Delhi Specialists Every Last Sunday"];
+const TICKER = ["Care You Can Trust", "Raebareli's First Nursing Home", "Est. 1983", "11 Specialists", "24×7 Emergency", "Delhi Specialists Every Last Sunday"];
 
 /**
  * Footer: a light contact capsule straddling the footer's top edge (echoing the header
@@ -89,14 +89,14 @@ export default function Footer() {
               </span>
               <span>
                 <span className="block font-serif text-[26px] leading-none">BBSM Nursing Home</span>
-                <span className="mt-2 block text-[10.5px] uppercase tracking-[0.18em] text-white/55">Hospital in Raebareli · Est. 1981</span>
+                <span className="mt-2 block text-[10.5px] uppercase tracking-[0.18em] text-white/55">Hospital in Raebareli · Est. 1983</span>
               </span>
             </Link>
             <p className="mt-6 font-serif leading-none" style={{ fontSize: "clamp(28px,2.6vw,38px)" }}>
               Care You Can Trust.
             </p>
             <p className="mt-3 max-w-[36ch] text-[13.5px] font-light leading-relaxed text-white/65">
-              Raebareli&apos;s first nursing home, founded in 1981 by Late Dr. Virendra Singh. Eleven specialists, one address.
+              Raebareli&apos;s first nursing home, founded in 1983 by Late Dr. Virendra Singh. Eleven specialists, one address.
             </p>
             <div className="mt-5 flex gap-2.5">
               <Social href={SITE.instagram} label="BBSM on Instagram" icon="instagram" />
@@ -158,7 +158,7 @@ export default function Footer() {
       </div>
 
       <Reveal y={12} viewport={{ once: true }} className="wrap-inner relative mt-5 flex flex-wrap justify-between gap-x-8 gap-y-2 text-[12px] tracking-[0.05em] text-white/62">
-        <span>BBSM Nursing Home — Brij Bhushan Singh Memorial Nursing Home, Raebareli&apos;s First Hospital, Est. 1981 · Hospital in Raebareli</span>
+        <span>BBSM Nursing Home — Brij Bhushan Singh Memorial Nursing Home, Raebareli&apos;s First Hospital, Est. 1983 · Hospital in Raebareli</span>
         <span className="flex gap-6">
           <Link href="/privacy" className="f-link !text-white/62 hover:!text-white">Privacy</Link>
           <Link href="/terms" className="f-link !text-white/62 hover:!text-white">Terms</Link>

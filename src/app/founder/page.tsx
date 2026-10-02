@@ -11,7 +11,7 @@ import { HOSPITAL_ID } from "@/lib/schema";
 export const metadata: Metadata = {
   title: { absolute: "Late Dr. Virendra Singh | Founder of Raebareli's First Hospital | BBSM Nursing Home" },
   description:
-    "Tribute to Late Dr. Virendra Singh — Civil Surgeon who founded Raebareli's first nursing home in 1981. Served the people of Raebareli for 49 years. He believed: A Doctor Never Retires.",
+    "Tribute to Late Dr. Virendra Singh — Civil Surgeon who founded Raebareli's first nursing home in 1983. Served the people of Raebareli for 49 years. He believed: A Doctor Never Retires.",
   keywords: ["Dr Virendra Singh Raebareli", "BBSM founder", "Raebareli first hospital founder", "Dr Virendra Singh tribute 19 August"],
   alternates: { canonical: "/founder" },
 };
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const CHAPTERS = [
   {
     h: "The Man Behind the Mission",
-    p: "Dr. Virendra Singh arrived in Raebareli when this city had no nursing home. In 1981, he built Brij Bhushan Singh Memorial Nursing Home — the city's first. Named in honour of his family. He turned no one away.",
+    p: "Dr. Virendra Singh arrived in Raebareli when this city had no nursing home. In 1983, he built Brij Bhushan Singh Memorial Nursing Home — the city's first. Named in honour of his family. He turned no one away.",
   },
   {
     h: "A Doctor Who Never Slowed Down",
@@ -46,7 +46,7 @@ export default function FounderPage() {
           alternateName: "डॉ. वीरेन्द्र सिंह",
           jobTitle: "Civil Surgeon",
           deathDate: "2021-08-19",
-          description: "Founder of BBSM Nursing Home (Brij Bhushan Singh Memorial Nursing Home) — Raebareli's first nursing home, established 1981.",
+          description: "Founder of BBSM Nursing Home (Brij Bhushan Singh Memorial Nursing Home) — Raebareli's first nursing home, established 1983.",
           url: `${SITE_URL}/founder`,
           image: `${SITE_URL}/images/founder-portrait.jpg`,
           founder: { "@id": HOSPITAL_ID },
@@ -80,7 +80,7 @@ export default function FounderPage() {
               <div className="a-fade mt-[26px] text-[12.5px] uppercase leading-[2] tracking-[0.15em] text-tribute-text/60" style={{ animationDelay: "1.1s" }}>
                 Civil Surgeon · Founder, BBSM Nursing Home
                 <br />
-                Raebareli&apos;s First Nursing Home · Est. 1981
+                Raebareli&apos;s First Nursing Home · Est. 1983
                 <br />
                 Dr. Virendra Singh Advance Surgical Centre
               </div>

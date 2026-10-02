@@ -30,7 +30,7 @@ export default function Hero() {
               <span className="font-serif text-[clamp(20px,2vw,28px)] italic leading-none text-white">40+ years of trust</span>
             </div>
             <div className="meta mt-2 text-white/55" style={{ fontSize: 11, letterSpacing: ".16em" }}>
-              Raebareli&apos;s First Nursing Home — Est. 1981
+              Raebareli&apos;s First Nursing Home — Est. 1983
             </div>
           </div>
 
@@ -41,7 +41,7 @@ export default function Hero() {
           <SplitText as="h1" trigger="mount" delay={0.26} stagger={0.09} parts={["Care You Can Trust."]} className="t-display m-0 max-w-[16ch] text-white" />
 
           <h2 className="a-rise m-0 max-w-[44ch] text-[clamp(17px,1.5vw,22px)] font-normal leading-[1.5] text-white/80" style={{ animationDelay: "0.55s" }}>
-            Raebareli&apos;s Most Trusted Hospital — Since 1981. Experienced medical care with a human approach, for every family in Raebareli and beyond.
+            Raebareli&apos;s Most Trusted Hospital — Since 1983. Experienced medical care with a human approach, for every family in Raebareli and beyond.
           </h2>
 
           <div className="a-rise flex flex-wrap items-center gap-4" style={{ animationDelay: "0.7s" }}>
@@ -59,7 +59,7 @@ export default function Hero() {
           >
             <span>Raebareli&apos;s First Nursing Home</span>
             <span className="text-white/30">/</span>
-            <span>Est. 1981</span>
+            <span>Est. 1983</span>
             <span className="text-white/30">/</span>
             <span>Best Hospital in Raebareli</span>
           </div>

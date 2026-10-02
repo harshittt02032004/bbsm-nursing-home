@@ -51,7 +51,7 @@ function Item({ item, i, progress, last }: { item: Milestone; i: number; progres
       <span aria-hidden className="absolute left-0 top-[23px] h-[11px] w-[11px] rounded-full ring-4 ring-white md:hidden" style={{ background: RED }}>
         {last && <span className="ll-ring absolute inset-0 rounded-full" style={{ background: RED }} />}
       </span>
-      <div className="font-serif text-[56px] leading-none" style={{ color: item.y === "1981" ? RED : NAVY }}>
+      <div className="font-serif text-[56px] leading-none" style={{ color: item.y === "1983" ? RED : NAVY }}>
         {isYear ? <time dateTime={item.y}>{item.y}</time> : item.y}
       </div>
       <p className="mt-4 font-sans text-[16px] leading-[1.6] text-[#3E4C5B]">{item.t}</p>
