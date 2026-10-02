@@ -54,7 +54,7 @@ export default function FounderPage() {
         }}
       />
 
-      <section className="border-b border-gold/25 px-[clamp(20px,4vw,64px)] pb-[clamp(70px,12vh,150px)] pt-[clamp(56px,9vh,110px)]">
+      <section className="border-b border-gold/25 px-[clamp(20px,4vw,64px)] pb-[40px] md:pb-[clamp(70px,12vh,150px)] pt-[32px] md:pt-[clamp(56px,9vh,110px)]">
         <div className="wrap-inner">
           <div className="a-fade">
             <Breadcrumbs dark items={[{ href: "/founder", label: "Founder's Tribute" }]} />
@@ -95,7 +95,7 @@ export default function FounderPage() {
         </div>
       </section>
 
-      <section className="px-[clamp(20px,4vw,64px)] py-[clamp(70px,12vh,150px)]">
+      <section className="px-[clamp(20px,4vw,64px)] py-[40px] md:py-[clamp(70px,12vh,150px)]">
         <div className="mx-auto max-w-[1100px]">
           <SplitText
             as="p"
@@ -104,7 +104,7 @@ export default function FounderPage() {
             className="m-0 font-serif font-normal italic leading-[1.14] tracking-[-0.01em] text-tribute-text"
             style={{ fontSize: "clamp(30px,4.4vw,62px)" }}
           />
-          <div className="mt-[clamp(50px,8vh,100px)] flex gap-[clamp(20px,3vw,40px)]">
+          <div className="mt-[28px] md:mt-[clamp(50px,8vh,100px)] flex gap-[clamp(20px,3vw,40px)]">
             <GrowLine color="rgba(201,168,76,.45)" className="w-px shrink-0" />
             <div className="flex flex-col gap-[clamp(40px,6vh,72px)]">
               {CHAPTERS.map((c, i) => (
@@ -121,13 +121,13 @@ export default function FounderPage() {
             </div>
           </div>
 
-          <Reveal className="mt-[clamp(60px,10vh,120px)]">
-            <blockquote className="m-0 border-y border-gold/25 py-[clamp(40px,7vh,80px)] text-center font-serif italic leading-[1.1] text-tribute-text" style={{ fontSize: "clamp(40px,6vw,88px)" }}>
+          <Reveal className="mt-[32px] md:mt-[clamp(60px,10vh,120px)]">
+            <blockquote className="m-0 border-y border-gold/25 py-[24px] md:py-[clamp(40px,7vh,80px)] text-center font-serif italic leading-[1.1] text-tribute-text" style={{ fontSize: "clamp(40px,6vw,88px)" }}>
               &ldquo;A Doctor Never Retires.&rdquo;
             </blockquote>
           </Reveal>
 
-          <Reveal className="mt-[clamp(50px,8vh,90px)] text-center">
+          <Reveal className="mt-[28px] md:mt-[clamp(50px,8vh,90px)] text-center">
             <div className="font-deva leading-[1.7] text-gold" style={{ fontSize: "clamp(18px,2vw,26px)" }} lang="hi">
               डॉ. वीरेन्द्र सिंह को हमारी विनम्र श्रद्धांजलि
             </div>

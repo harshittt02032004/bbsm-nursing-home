@@ -34,7 +34,7 @@ export default function ContactPage() {
       />
       <PageIntro eyebrow="Find BBSM" title="Visit Raebareli's Most Trusted Hospital" crumbs={[{ href: "/contact", label: "Contact" }]} />
 
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[clamp(70px,11vh,140px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[40px] md:pb-[clamp(70px,11vh,140px)]">
         <div className="wrap-inner grid items-stretch gap-[clamp(24px,4vw,64px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
           <Reveal className="min-h-[clamp(360px,58vh,620px)]">
             <MapEmbed />
@@ -78,7 +78,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(70px,11vh,140px)]">
+      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[40px] md:py-[clamp(70px,11vh,140px)]">
         <div className="wrap-inner grid gap-[clamp(28px,5vw,84px)] lg:grid-cols-[1fr_2fr]">
           <div>
             <SplitText parts={["Before you visit"]} className="t-h2 m-0" />

@@ -5,7 +5,7 @@ import Reveal from "@/components/motion/Reveal";
 
 export default function PatientExperience() {
   return (
-    <section className="relative isolate overflow-hidden px-[clamp(20px,4vw,64px)] py-[clamp(110px,22vh,260px)] text-white">
+    <section className="relative isolate overflow-hidden px-[clamp(20px,4vw,64px)] py-[60px] md:py-[clamp(110px,22vh,260px)] text-white">
       <Parallax amount={90} className="absolute inset-[-90px_0] -z-20">
         <Image
           src="/images/consult-physician.jpg"

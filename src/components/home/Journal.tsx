@@ -8,7 +8,7 @@ import { ARTICLES } from "@/lib/journal";
 export default function Journal() {
   const [feat, ...rest] = ARTICLES;
   return (
-    <section id="journal" className="scroll-mt-28 bg-paper px-[clamp(20px,4vw,64px)] pb-[clamp(80px,13vh,170px)]">
+    <section id="journal" className="scroll-mt-28 bg-paper px-[clamp(20px,4vw,64px)] pb-[44px] md:pb-[clamp(80px,13vh,170px)]">
       <div className="wrap-inner">
         <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-ink/13 pb-[34px]">
           <SplitText parts={["Health Journal"]} className="t-h2 m-0 !text-[clamp(30px,3.6vw,52px)] !leading-none" />

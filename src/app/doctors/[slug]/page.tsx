@@ -40,14 +40,14 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
   return (
     <>
       <JsonLd data={physicianSchema(d)} />
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[clamp(60px,10vh,120px)] pt-[clamp(56px,9vh,110px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[32px] md:pb-[clamp(60px,10vh,120px)] pt-[32px] md:pt-[clamp(56px,9vh,110px)]">
         <div className="wrap-inner">
           <div className="a-fade">
             <Breadcrumbs items={[{ href: "/doctors", label: "Doctors" }, { href: `/doctors/${d.slug}`, label: d.name }]} />
           </div>
           <div className="mt-12 grid items-end gap-[clamp(28px,5vw,84px)] md:[grid-template-columns:minmax(0,min(42%,52svh,480px))_minmax(0,1fr)]">
             <div className="a-clip r-img max-w-[480px]" style={{ animationDelay: ".1s" }}>
-              <DoctorPortrait doctor={d} preload className="aspect-[4/5]" sizes="(min-width: 768px) 480px, 100vw" />
+              <DoctorPortrait doctor={d} preload className={d.portrait ? "aspect-[4/5]" : "aspect-[5/3] md:aspect-[4/5]"} sizes="(min-width: 768px) 480px, 100vw" />
             </div>
             <div>
               <div className="a-fade text-[11.5px] font-medium uppercase tracking-[0.2em]" style={{ color: accent, animationDelay: ".2s" }}>
@@ -87,7 +87,7 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
         </div>
       </section>
 
-      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(70px,11vh,140px)]">
+      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[40px] md:py-[clamp(70px,11vh,140px)]">
         <div className="wrap-inner grid gap-[clamp(28px,5vw,84px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
           <div>
             <SplitText parts={["Consult", d.name.split(" ").slice(0, 2).join(" "), "for"]} className="t-h2 m-0 max-w-[14ch]" />
@@ -103,7 +103,7 @@ export default async function DoctorPage({ params }: { params: Promise<{ slug: s
         </div>
       </section>
 
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(60px,9vh,110px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[32px] md:py-[clamp(60px,9vh,110px)]">
         <div className="wrap-inner flex flex-wrap items-end justify-between gap-10">
           {specs.length > 0 && (
             <Reveal>

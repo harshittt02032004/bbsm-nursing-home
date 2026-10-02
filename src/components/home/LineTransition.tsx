@@ -16,8 +16,8 @@ export default function LineTransition() {
   const grey = useTransform(p, [0.16, 1], [0, 1]);
 
   return (
-    <section ref={ref} className="overflow-hidden bg-paper py-[clamp(60px,10vh,120px)]" aria-label="Care, Expertise, Technology">
-      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" className="block h-[clamp(150px,22vh,240px)] w-full" aria-hidden>
+    <section ref={ref} className="overflow-hidden bg-paper py-[32px] md:py-[clamp(60px,10vh,120px)]" aria-label="Care, Expertise, Technology">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" className="block h-[110px] w-full md:h-[clamp(150px,22vh,240px)]" aria-hidden>
         <motion.path d="M-20 170 C 180 170, 250 40, 430 40 S 700 170, 880 150 S 1120 40, 1220 60" fill="none" stroke="#C52030" strokeWidth="1.4" style={{ pathLength: reduce ? 1 : red }} />
         <motion.path d="M-20 60 C 200 60, 280 190, 470 180 S 760 50, 940 70 S 1140 190, 1220 160" fill="none" stroke="#07518B" strokeWidth="1.4" style={{ pathLength: reduce ? 1 : blue }} />
         <motion.path d="M-20 115 C 220 100, 300 130, 520 112 S 800 96, 1000 118 S 1160 108, 1220 110" fill="none" stroke="rgba(17,24,32,.16)" strokeWidth="1" style={{ pathLength: reduce ? 1 : grey }} />

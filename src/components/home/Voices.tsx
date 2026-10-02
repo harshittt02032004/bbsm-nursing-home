@@ -21,7 +21,7 @@ export default function Voices() {
   }, [i, paused]);
 
   return (
-    <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(80px,13vh,170px)]">
+    <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[44px] md:py-[clamp(80px,13vh,170px)]">
       <div className="wrap-inner grid items-center gap-[clamp(24px,4vw,72px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
         <ImageReveal
           src="/images/consult-eye.jpg"

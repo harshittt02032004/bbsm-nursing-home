@@ -68,7 +68,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder quote — written word by word on scroll */}
-      <div className="bg-mist pt-[clamp(48px,8vh,96px)]">
+      <div className="bg-mist pt-[28px] md:pt-[clamp(48px,8vh,96px)]">
         <section aria-label="Founder's quote" className="bg-blue-deep px-5 py-16 md:px-[clamp(64px,8.4vw,160px)] md:py-24">
           <noscript>
             <style>{`.fq-word,.fq-fade{opacity:1!important}.fq-line{width:120px!important}`}</style>
@@ -77,7 +77,7 @@ export default function AboutPage() {
         </section>
       </div>
 
-      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(70px,11vh,140px)]">
+      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[40px] md:py-[clamp(70px,11vh,140px)]">
         <div className="wrap-inner grid gap-[clamp(28px,4vw,72px)] [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">
           {CHAPTERS.map((c, i) => (
             <Reveal key={c.k} delay={i * 0.1}>
@@ -96,7 +96,7 @@ export default function AboutPage() {
         <Lifeline items={TIMELINE} />
       </section>
 
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(60px,10vh,120px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[32px] md:py-[clamp(60px,10vh,120px)]">
         <div className="wrap-inner grid gap-px bg-ink/12 [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]">
           <Reveal className="bg-paper px-[26px] py-8">
             <div className="font-serif leading-[1.05] text-red" style={{ fontSize: "clamp(30px,3vw,44px)" }}>

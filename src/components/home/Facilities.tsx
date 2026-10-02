@@ -9,10 +9,10 @@ import SplitText from "@/components/motion/SplitText";
 export default function Facilities() {
   const reduce = useReducedMotion();
   return (
-    <section className="bg-paper py-[clamp(80px,13vh,150px)] lg:py-0">
+    <section className="bg-paper py-[44px] md:py-[clamp(80px,13vh,150px)] lg:py-0">
       <div className="lg:hidden">
         <Header />
-        <div className="hscroll mt-10 flex snap-x snap-mandatory items-end gap-5 overflow-x-auto px-[clamp(20px,4vw,64px)] pb-6">
+        <div className="hscroll mt-10 flex snap-x snap-mandatory items-end gap-5 overflow-x-auto px-[clamp(20px,4vw,64px)] pb-2">
           {FACILITIES.map((f) => (
             <figure key={f.caption} className="m-0 w-[78vw] max-w-[380px] shrink-0 snap-center">
               <div className="r-img relative h-[clamp(260px,52vh,420px)]">
@@ -39,7 +39,7 @@ function Header() {
 
 function Static() {
   return (
-    <div className="py-[clamp(80px,13vh,150px)]">
+    <div className="py-[44px] md:py-[clamp(80px,13vh,150px)]">
       <Header />
       <div className="hscroll mt-14 flex items-end gap-[clamp(20px,3vw,54px)] overflow-x-auto px-[clamp(20px,4vw,64px)] pb-7">
         {FACILITIES.map((f) => (

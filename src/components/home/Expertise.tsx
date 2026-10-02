@@ -17,7 +17,7 @@ export default function Expertise() {
   const spec = SPECIALITIES[active];
 
   return (
-    <section className="bg-ink px-[clamp(20px,4vw,64px)] py-[clamp(80px,13vh,160px)] text-white">
+    <section className="bg-ink px-[clamp(20px,4vw,64px)] py-[44px] md:py-[clamp(80px,13vh,160px)] text-white">
       <div className="wrap-inner">
         <div className="flex flex-wrap items-baseline gap-x-10 gap-y-4 border-b border-white/14 pb-11">
           <SplitText parts={["Medical Expertise"]} className="t-h2 m-0 !leading-none" />

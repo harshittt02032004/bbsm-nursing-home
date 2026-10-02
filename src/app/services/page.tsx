@@ -24,7 +24,7 @@ export default function ServicesPage() {
         maxCh={18}
         crumbs={[{ href: "/services", label: "Specialities" }]}
       />
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[clamp(80px,13vh,160px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[44px] md:pb-[clamp(80px,13vh,160px)]">
         <ul className="wrap-inner m-0 list-none border-t border-ink/13 p-0">
           {SPECIALITIES.map((s, i) => (
             <Reveal as="li" key={s.slug} delay={i * 0.03} y={18}>

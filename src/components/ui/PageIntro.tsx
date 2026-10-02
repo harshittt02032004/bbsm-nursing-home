@@ -20,7 +20,7 @@ export default function PageIntro({
   children?: React.ReactNode;
 }) {
   return (
-    <section className={`${bg} gutter pb-[clamp(40px,6vh,70px)] pt-[clamp(56px,9vh,120px)]`}>
+    <section className={`${bg} gutter pb-[24px] md:pb-[clamp(40px,6vh,70px)] pt-[32px] md:pt-[clamp(56px,9vh,120px)]`}>
       <div className="wrap-inner">
         <Reveal y={12}>
           <Breadcrumbs items={crumbs} />

@@ -40,7 +40,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
   return (
     <>
       <JsonLd data={specialitySchema(s)} />
-      <section className="bg-ink px-[clamp(20px,4vw,64px)] pb-[clamp(60px,9vh,110px)] pt-[clamp(56px,9vh,110px)] text-white">
+      <section className="bg-ink px-[clamp(20px,4vw,64px)] pb-[32px] md:pb-[clamp(60px,9vh,110px)] pt-[32px] md:pt-[clamp(56px,9vh,110px)] text-white">
         <div className="wrap-inner">
           <div className="a-fade">
             <Breadcrumbs dark items={[{ href: "/services", label: "Specialities" }, { href: `/services/${s.slug}`, label: s.name }]} />
@@ -68,7 +68,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
         </div>
       </section>
 
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(70px,11vh,140px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[40px] md:py-[clamp(70px,11vh,140px)]">
         <div className="wrap-inner grid gap-[clamp(40px,6vw,100px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))]">
           <div>
             <SplitText parts={["What we treat"]} className="t-h2 m-0" />
@@ -104,7 +104,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
         </div>
       </section>
 
-      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(70px,11vh,140px)]">
+      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[40px] md:py-[clamp(70px,11vh,140px)]">
         <div className="wrap-inner">
           <SplitText parts={[docs.length > 1 ? "Your specialists" : "Your specialist"]} className="t-h2 m-0" />
           <div className="mt-12 grid gap-[clamp(20px,3vw,48px)] [grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))]">
@@ -113,7 +113,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
                 <Link href={`/doctors/${d!.slug}`} className="group block text-ink hover:text-ink">
                   <div className="r-img">
                     <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.03]">
-                      <DoctorPortrait doctor={d!} className="aspect-[4/5]" sizes="(min-width: 900px) 30vw, 100vw" />
+                      <DoctorPortrait doctor={d!} className={d!.portrait ? "aspect-[4/5]" : "aspect-[5/3] md:aspect-[4/5]"} sizes="(min-width: 900px) 30vw, 100vw" />
                     </div>
                   </div>
                   <div className="mt-5 font-serif text-[30px] leading-[1.05] transition-colors group-hover:text-red">{d!.name}</div>
@@ -130,7 +130,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
         </div>
       </section>
 
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(60px,9vh,110px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[32px] md:py-[clamp(60px,9vh,110px)]">
         <div className="wrap-inner flex flex-wrap items-end justify-between gap-10">
           <Reveal>
             <Link href="/services" className="link-u">All specialities <span className="arr">→</span></Link>

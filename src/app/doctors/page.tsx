@@ -42,10 +42,10 @@ export default function DoctorsPage() {
         </Reveal>
       </PageIntro>
 
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[clamp(60px,9vh,110px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[32px] md:pb-[clamp(60px,9vh,110px)]">
         <div className="wrap-inner">
           {GROUPS.map((g) => (
-            <div key={g.key} id={groupId(g.key)} className="scroll-mt-28 pt-[clamp(40px,6vh,80px)]">
+            <div key={g.key} id={groupId(g.key)} className="scroll-mt-28 pt-[24px] md:pt-[clamp(40px,6vh,80px)]">
               <div className="relative flex flex-wrap items-baseline gap-x-7 gap-y-3 pb-[22px]">
                 <SplitText parts={[g.title]} className="m-0 font-serif font-normal leading-none" style={{ fontSize: "clamp(26px,3vw,42px)" }} />
                 <span className="text-[11.5px] font-medium uppercase tracking-[0.18em]" style={{ color: g.accent }}>{g.timing}</span>
@@ -55,11 +55,11 @@ export default function DoctorsPage() {
                 <p className="mt-[18px] max-w-[70ch] text-[15.5px] font-light leading-[1.7] text-ink/70">{g.note}</p>
               </Reveal>
               {DOCTORS.filter((d) => d.group === g.key).map((d) => (
-                <article key={d.slug} className="grid gap-[clamp(20px,3vw,56px)] border-b border-ink/11 py-[clamp(30px,5vh,56px)] md:[grid-template-columns:minmax(0,clamp(220px,26vw,340px))_minmax(0,1fr)]">
+                <article key={d.slug} className="grid gap-[clamp(20px,3vw,56px)] border-b border-ink/11 py-[24px] md:py-[clamp(30px,5vh,56px)] md:[grid-template-columns:minmax(0,clamp(220px,26vw,340px))_minmax(0,1fr)]">
                   <Reveal>
                     <Link href={`/doctors/${d.slug}`} aria-label={`${d.name} — profile`} className="r-img group block max-w-[340px]">
                       <div className="transition-transform duration-[1.2s] ease-[cubic-bezier(.19,1,.22,1)] group-hover:scale-[1.03]">
-                        <DoctorPortrait doctor={d} className="aspect-[4/5]" sizes="(min-width: 768px) 340px, 100vw" />
+                        <DoctorPortrait doctor={d} className={d.portrait ? "aspect-[4/5]" : "aspect-[5/3] md:aspect-[4/5]"} sizes="(min-width: 768px) 340px, 100vw" />
                       </div>
                     </Link>
                   </Reveal>
@@ -93,7 +93,7 @@ export default function DoctorsPage() {
         </div>
       </section>
 
-      <section id="timings" className="scroll-mt-24 bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(60px,10vh,120px)]">
+      <section id="timings" className="scroll-mt-24 bg-mist px-[clamp(20px,4vw,64px)] py-[32px] md:py-[clamp(60px,10vh,120px)]">
         <div className="wrap-inner">
           <SplitText parts={["OPD Timings"]} className="m-0 mb-[30px] font-serif font-normal leading-none" style={{ fontSize: "clamp(26px,3vw,42px)" }} />
           <div role="table" aria-label="OPD timings at BBSM Nursing Home">

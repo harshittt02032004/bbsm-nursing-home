@@ -4,7 +4,7 @@ export default function LegalPage({ title, slug, sections }: { title: string; sl
   return (
     <>
       <PageIntro eyebrow="BBSM Nursing Home" title={title} crumbs={[{ href: `/${slug}`, label: title }]} />
-      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[clamp(70px,11vh,140px)]">
+      <section className="bg-paper px-[clamp(20px,4vw,64px)] pb-[40px] md:pb-[clamp(70px,11vh,140px)]">
         <div className="wrap-inner max-w-[760px]">
           {sections.map((s) => (
             <div key={s.h} className="border-t border-ink/12 py-8">

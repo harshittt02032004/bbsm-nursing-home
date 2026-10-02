@@ -4,7 +4,7 @@ import { SITE } from "@/lib/site";
 
 export default function CtaBand() {
   return (
-    <section id="appointment" className="relative overflow-hidden bg-blue-deep px-[clamp(20px,4vw,64px)] py-[clamp(90px,16vh,200px)] text-white">
+    <section id="appointment" className="relative overflow-hidden bg-blue-deep px-[clamp(20px,4vw,64px)] py-[48px] md:py-[clamp(90px,16vh,200px)] text-white">
       <div
         aria-hidden
         className="drift absolute left-[-8vw] top-[-14vw] h-[44vw] w-[44vw] rounded-full"

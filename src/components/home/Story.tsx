@@ -7,7 +7,7 @@ import GrowLine from "@/components/motion/GrowLine";
 
 export default function Story() {
   return (
-    <section id="story" className="overflow-hidden bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(80px,13vh,170px)]">
+    <section id="story" className="overflow-hidden bg-mist px-[clamp(20px,4vw,64px)] py-[44px] md:py-[clamp(80px,13vh,170px)]">
       <div className="wrap-inner grid items-start gap-[clamp(28px,5vw,86px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))]">
         <div className="relative pb-14">
           <ImageReveal

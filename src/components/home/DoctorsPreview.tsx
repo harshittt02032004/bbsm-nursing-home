@@ -16,7 +16,7 @@ export default function DoctorsPreview() {
   const doc = DOCTORS[active];
 
   return (
-    <section className="overflow-x-clip bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(80px,13vh,170px)]">
+    <section className="overflow-x-clip bg-paper px-[clamp(20px,4vw,64px)] py-[44px] md:py-[clamp(80px,13vh,170px)]">
       <div className="wrap-inner">
         <div className="flex flex-wrap items-end justify-between gap-5">
           <SplitText parts={["Meet Raebareli's most experienced medical team."]} className="t-h2 m-0 max-w-[18ch]" />
@@ -28,7 +28,7 @@ export default function DoctorsPreview() {
         </div>
 
         {/* Desktop: list + sticky profile card (4:5 portrait beside the details, so the whole photo shows) */}
-        <div className="mt-[clamp(44px,7vh,84px)] hidden items-start gap-[clamp(24px,4vw,72px)] lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+        <div className="mt-[24px] md:mt-[clamp(44px,7vh,84px)] hidden items-start gap-[clamp(24px,4vw,72px)] lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
           <ul>
             {DOCTORS.map((d, i) => {
               const on = i === active;
@@ -92,7 +92,7 @@ export default function DoctorsPreview() {
 
         {/* Mobile: swipeable portrait rail */}
         <div className="-mx-[clamp(20px,4vw,64px)] mt-12 lg:hidden">
-          <div className="hscroll flex snap-x snap-mandatory gap-4 overflow-x-auto px-[clamp(20px,4vw,64px)] pb-5">
+          <div className="hscroll flex snap-x snap-mandatory scroll-px-[clamp(20px,4vw,64px)] gap-4 overflow-x-auto px-[clamp(20px,4vw,64px)] pb-5">
             {DOCTORS.map((d) => (
               <Link key={d.slug} href={`/doctors/${d.slug}`} className="w-[74vw] max-w-[320px] shrink-0 snap-start text-ink hover:text-ink">
                 <DoctorPortrait doctor={d} className="aspect-[4/5]" sizes="74vw" />

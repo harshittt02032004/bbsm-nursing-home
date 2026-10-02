@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export default function NotFound() {
   return (
-    <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(90px,16vh,200px)]">
+    <section className="bg-paper px-[clamp(20px,4vw,64px)] py-[48px] md:py-[clamp(90px,16vh,200px)]">
       <div className="wrap-inner">
         <div className="eyebrow">404</div>
         <h1 className="t-h1 a-rise mt-6 max-w-[14ch]">This page has moved on.</h1>

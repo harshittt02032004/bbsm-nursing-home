@@ -50,7 +50,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         }}
       />
       <article>
-        <header className="bg-paper px-[clamp(20px,4vw,64px)] pb-12 pt-[clamp(56px,9vh,110px)]">
+        <header className="bg-paper px-[clamp(20px,4vw,64px)] pb-12 pt-[32px] md:pt-[clamp(56px,9vh,110px)]">
           <div className="mx-auto max-w-[980px]">
             <div className="a-fade">
               <Breadcrumbs items={[{ href: "/#journal", label: "Health Journal" }, { href: `/journal/${a.slug}`, label: a.category }]} />
@@ -67,7 +67,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <Image src={a.image} alt={a.imageAlt} fill preload sizes="100vw" className="a-settle object-cover" style={{ animationDelay: ".3s" }} />
           </div>
         </div>
-        <div className="bg-paper px-[clamp(20px,4vw,64px)] py-[clamp(60px,10vh,120px)]">
+        <div className="bg-paper px-[clamp(20px,4vw,64px)] py-[32px] md:py-[clamp(60px,10vh,120px)]">
           <div className="mx-auto max-w-[720px]">
             {a.sections.map((s, i) => (
               <Reveal key={i} className="mb-10">
@@ -103,7 +103,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </article>
-      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(60px,9vh,110px)]">
+      <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[32px] md:py-[clamp(60px,9vh,110px)]">
         <div className="wrap-inner">
           <div className="eyebrow">Keep reading</div>
           <div className="mt-8 grid gap-10 [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">

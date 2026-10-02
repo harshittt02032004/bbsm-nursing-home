@@ -4,7 +4,7 @@ import { WHY } from "@/lib/data";
 
 export default function Why() {
   return (
-    <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[clamp(80px,13vh,170px)]">
+    <section className="bg-mist px-[clamp(20px,4vw,64px)] py-[44px] md:py-[clamp(80px,13vh,170px)]">
       <div className="wrap-inner grid gap-[clamp(24px,4vw,72px)] lg:grid-cols-3">
         <div className="self-start lg:sticky lg:top-[100px]">
           <SplitText parts={["Why BBSM"]} className="t-h2 m-0" />
