@@ -128,6 +128,8 @@ export const DOCTORS: Doctor[] = [
     forWhat: "Cancer diagnosis, chemotherapy, second opinions, ongoing cancer treatment",
     expertise: "Non-surgical cancer management: chemotherapy, targeted therapy, immunotherapy, staging.",
     specialities: ["oncology"],
+    portrait: "/images/dr-vineet-talwar.jpg",
+    portraitPosition: "50% 10%",
   },
   {
     slug: "dr-gyanendra-singh",
