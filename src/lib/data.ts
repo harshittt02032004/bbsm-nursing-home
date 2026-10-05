@@ -50,6 +50,8 @@ export const DOCTORS: Doctor[] = [
     expertise:
       "Surgical and non-surgical treatment of bone fractures, joint pain, arthritis, knee and hip conditions, slip disc, spinal disorders, and sports injuries. Expert in orthopaedic surgery for the complete musculoskeletal system.",
     specialities: ["orthopaedics"],
+    portrait: "/images/dr-omkar-singh-bhadoria.jpg",
+    portraitPosition: "50% 15%",
   },
   {
     slug: "dr-shailaja-singh",

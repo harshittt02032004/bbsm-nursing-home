@@ -18,8 +18,8 @@ export const ARTICLES: Article[] = [
     minutes: 4,
     excerpt:
       "A simple way to decide where to start, so you reach the right doctor sooner — without unnecessary visits.",
-    image: "/images/consult-physician.jpg",
-    imageAlt: "A physician in consultation with patients at BBSM Nursing Home, Raebareli",
+    image: "/images/journal-specialist.jpg",
+    imageAlt: "Representative image: a family doctor explaining a note to a couple at his desk",
     related: "general-medicine",
     sections: [
       {
@@ -72,8 +72,8 @@ export const ARTICLES: Article[] = [
     minutes: 3,
     excerpt:
       "Many serious conditions stay silent for years. A timely check-up finds them early — when they are easiest to treat.",
-    image: "/images/consult-eye-2.jpg",
-    imageAlt: "A routine eye examination at BBSM Nursing Home, Raebareli",
+    image: "/images/journal-checkup.jpg",
+    imageAlt: "Representative image: a doctor checking a man's blood pressure during a routine health check-up",
     related: "general-medicine",
     sections: [
       {
@@ -118,8 +118,8 @@ export const ARTICLES: Article[] = [
     minutes: 3,
     excerpt:
       "Some aches are part of an active life. Others are early signals that deserve an orthopaedic opinion.",
-    image: "/images/consult-ortho.jpg",
-    imageAlt: "An orthopaedic consultation at BBSM Nursing Home, Raebareli",
+    image: "/images/journal-joint.jpg",
+    imageAlt: "Representative image: an orthopaedic doctor examining a man's knee",
     related: "orthopaedics",
     sections: [
       {

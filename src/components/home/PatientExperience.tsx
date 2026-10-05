@@ -8,11 +8,11 @@ export default function PatientExperience() {
     <section className="relative isolate overflow-hidden px-[clamp(20px,4vw,64px)] py-[60px] md:py-[clamp(110px,22vh,260px)] text-white">
       <Parallax amount={90} className="absolute inset-[-90px_0] -z-20">
         <Image
-          src="/images/consult-physician.jpg"
-          alt="A BBSM physician listening to a patient and family during consultation in Raebareli"
+          src="/images/care-patient-experience.jpg"
+          alt="Representative image: a doctor holding an elderly patient's hand and listening, her daughter beside her"
           fill
           sizes="100vw"
-          className="object-cover object-[60%_40%]"
+          className="object-cover object-[78%_35%]"
         />
       </Parallax>
       <div className="absolute inset-0 -z-10" style={{ background: "linear-gradient(100deg, rgba(6,40,70,.94) 0%, rgba(6,59,104,.82) 45%, rgba(11,34,51,.45) 100%)" }} />
