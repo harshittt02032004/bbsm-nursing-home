@@ -188,6 +188,8 @@ export const DOCTORS: Doctor[] = [
     forWhat: "Thyroid, gallstones, hernia, laparoscopic surgery, endocrine conditions",
     expertise: "Minimally invasive surgery: gallbladder, hernia, appendix. Thyroid, parathyroid, adrenal.",
     specialities: ["laparoscopic-endocrine"],
+    portrait: "/images/dr-nitish-gupta.jpg",
+    portraitPosition: "50% 15%",
   },
   {
     slug: "dr-mahima-mishra",
@@ -226,8 +228,9 @@ export const SPECIALITIES: Speciality[] = [
       "Back pain that travels down the leg, or numbness and tingling",
       "Any fall or injury followed by pain, deformity or difficulty bearing weight",
     ],
-    image: "/images/consult-ortho.jpg",
-    imageAlt: "Orthopaedic consultation at BBSM Nursing Home, Raebareli",
+    image: "/images/dr-omkar-singh-bhadoria-ot.jpg",
+    imagePosition: "50% 30%",
+    imageAlt: "Dr. Omkar Singh Bhadoria, Bone, Joint & Spine Surgeon at BBSM Nursing Home, Raebareli, in surgical scrubs",
     keyword: "Orthopaedic doctor in Raebareli",
   },
   {
