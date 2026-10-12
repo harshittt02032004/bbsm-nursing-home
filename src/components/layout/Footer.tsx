@@ -6,11 +6,10 @@ import Reveal from "@/components/motion/Reveal";
 import GrowLine from "@/components/motion/GrowLine";
 import FooterMap from "./FooterMap";
 
-type IconName = "phone" | "emergency" | "clock" | "calendar" | "instagram" | "star" | "pin";
+type IconName = "phone" | "clock" | "calendar" | "instagram" | "star" | "pin";
 
 const CONTACT: { label: string; value: string; href?: string; icon: IconName }[] = [
   { label: "Appointments", value: SITE.phone, href: SITE.phoneHref, icon: "phone" },
-  { label: "24×7 Emergency", value: SITE.emergency, href: SITE.emergencyHref, icon: "emergency" },
   { label: "Daily OPD", value: "Every day, 10 AM – 4 PM", icon: "clock" },
   { label: "Super Speciality OPD", value: "Last Sunday, 9 AM – 12 PM", icon: "calendar" },
 ];
@@ -41,15 +40,13 @@ export default function Footer() {
         {/* Contact capsule */}
         <Reveal
           y={46}
-          className="-mt-10 grid overflow-hidden rounded-[26px] border border-white/70 bg-paper text-ink shadow-[0_18px_50px_rgba(3,20,38,0.35)] sm:grid-cols-2 lg:-mt-[38px] lg:grid-cols-4 lg:rounded-full min-[1560px]:grid-cols-[repeat(4,minmax(0,1fr))_auto]"
+          className="-mt-10 grid overflow-hidden rounded-[26px] border border-white/70 bg-paper text-ink shadow-[0_18px_50px_rgba(3,20,38,0.35)] sm:grid-cols-2 lg:-mt-[38px] lg:grid-cols-3 lg:rounded-full min-[1560px]:grid-cols-[repeat(3,minmax(0,1fr))_auto]"
         >
           {CONTACT.map((c) => {
             const inner = (
               <>
                 <span
-                  className={`seg-ico grid h-[38px] w-[38px] shrink-0 place-items-center rounded-full lg:max-[1139px]:hidden ${
-                    c.icon === "emergency" ? "bg-red/10 text-red" : "bg-mist text-blue"
-                  }`}
+                  className="seg-ico grid h-[38px] w-[38px] shrink-0 place-items-center rounded-full bg-mist text-blue lg:max-[1139px]:hidden"
                 >
                   <Icon name={c.icon} />
                 </span>
@@ -200,12 +197,6 @@ function Icon({ name }: { name: IconName }) {
       return (
         <svg {...p}>
           <path d="M5 4h3.5l1.6 4.3-2.2 1.5a12 12 0 0 0 6.3 6.3l1.5-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5C10.6 20 4 13.4 3.5 5.6A1.5 1.5 0 0 1 5 4Z" />
-        </svg>
-      );
-    case "emergency":
-      return (
-        <svg {...p}>
-          <path d="M3 12h4l2-5 4 10 2-5h6" />
         </svg>
       );
     case "clock":

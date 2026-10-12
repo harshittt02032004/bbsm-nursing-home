@@ -14,7 +14,7 @@ const SPRING = "duration-[450ms] ease-[cubic-bezier(.23,1,.32,1)]";
 
 /**
  * Fixed header. At the top of the page it is a slim full-width bar under the
- * emergency strip (total height = --header-h in globals.css); once the visitor
+ * info strip (total height = --header-h in globals.css); once the visitor
  * scrolls it shrinks into a floating glass capsule with a smaller logo and
  * tighter padding (same behaviour as the Patle and Mannat sites).
  */
@@ -62,7 +62,7 @@ export default function Header() {
   return (
     <>
       <header className="pointer-events-none fixed inset-x-0 top-0 z-[60]">
-        {/* Emergency strip — folds away once the page is scrolled */}
+        {/* Info strip — folds away once the page is scrolled */}
         <motion.div
           className="pointer-events-auto overflow-hidden bg-blue-deep text-white"
           animate={{ height: scrolled ? 0 : 28 }}
@@ -70,13 +70,13 @@ export default function Header() {
           transition={{ duration: 0.5, ease: EXPO }}
         >
           <div className="wrap flex h-7 items-center justify-between gap-6 text-[10.5px] tracking-[0.08em] sm:text-[11px]">
-            <a href={SITE.emergencyHref} className="flex items-center gap-2 text-white hover:text-white">
+            <a href={SITE.phoneHref} className="flex items-center gap-2 text-white hover:text-white">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="pulse-dot absolute inset-0 rounded-full bg-red" />
                 <span className="relative h-1.5 w-1.5 rounded-full bg-red" />
               </span>
-              <span className="font-semibold uppercase tracking-[0.14em]">24×7 Emergency</span>
-              <span className="text-white/80">{SITE.emergency}</span>
+              <span className="font-semibold uppercase tracking-[0.14em]">Appointments</span>
+              <span className="text-white/80">{SITE.phone}</span>
             </a>
             <span className="hidden text-white/60 md:block">
               Daily OPD 10 AM – 4 PM <span className="mx-2 text-white/30">/</span> Super Speciality OPD · Last Sunday 9 AM – 12 PM
@@ -215,9 +215,6 @@ export default function Header() {
               >
                 <a href={SITE.phoneHref} className="btn btn-red w-full">
                   Book an Appointment <span className="arr">→</span>
-                </a>
-                <a href={SITE.emergencyHref} className="btn btn-ghost w-full">
-                  24×7 Emergency · {SITE.emergency}
                 </a>
                 <p className="mt-3 text-[13px] font-light leading-relaxed text-ink/60">{SITE.address.full}</p>
               </motion.div>

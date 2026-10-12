@@ -38,7 +38,6 @@ export function hospitalSchema() {
     ],
     contactPoint: [
       { "@type": "ContactPoint", telephone: SITE.phone, contactType: "appointments", areaServed: "IN", availableLanguage: ["English", "Hindi"] },
-      { "@type": "ContactPoint", telephone: SITE.emergency, contactType: "emergency", areaServed: "IN", availableLanguage: ["English", "Hindi"] },
     ],
     availableService: SPECIALITIES.map((s) => ({ "@type": "MedicalTherapy", name: s.name, url: `${SITE_URL}/services/${s.slug}` })),
     department: [

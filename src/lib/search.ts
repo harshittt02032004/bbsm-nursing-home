@@ -14,7 +14,6 @@ const PAGES: SearchItem[] = [
   { title: "Founder's Tribute", sub: "Late Dr. Virendra Singh", href: "/founder", kind: "Page", terms: "virendra singh founder tribute 19 august civil surgeon" },
   { title: "Contact & Directions", sub: SITE.address.full, href: "/contact", kind: "Page", terms: "contact address directions map location jail garden road indira nagar hospital phone" },
   { title: "Book an Appointment", sub: `Call ${SITE.phone}`, href: SITE.phoneHref, kind: "Call", terms: "appointment book booking call phone number" },
-  { title: "24×7 Emergency", sub: `Call ${SITE.emergency}`, href: SITE.emergencyHref, kind: "Call", terms: "emergency urgent 24 hours ambulance night" },
 ];
 
 export const SEARCH_INDEX: SearchItem[] = [

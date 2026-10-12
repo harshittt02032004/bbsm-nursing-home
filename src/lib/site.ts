@@ -9,8 +9,6 @@ export const SITE = {
   founded: 1983,
   phone: "+91 96166 06051",
   phoneHref: "tel:+919616606051",
-  emergency: "+91 99364 60525",
-  emergencyHref: "tel:+919936460525",
   address: {
     street: "A 7/7, Jail Garden Road, Awas Vikas Colony, Indira Nagar",
     city: "Raebareli",
@@ -34,7 +32,6 @@ export const SITE = {
   hours: {
     dailyOpd: "Every Day · 10:00 AM – 4:00 PM",
     superOpd: "Last Sunday of Month · 9:00 AM – 12:00 PM",
-    emergency: "24 × 7",
   },
 } as const;
 

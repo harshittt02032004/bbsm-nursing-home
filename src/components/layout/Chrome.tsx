@@ -12,7 +12,7 @@ export function ScrollProgress() {
   return <motion.div aria-hidden className="fixed inset-x-0 top-0 z-[70] h-[2px] origin-left bg-red" style={{ scaleX }} />;
 }
 
-/** Mobile-only action dock — call, emergency, directions — appears once the hero is passed. */
+/** Mobile-only action dock — call, directions — appears once the hero is passed. */
 export function MobileDock() {
   const { scrollY } = useScroll();
   const [show, setShow] = useState(false);
@@ -21,7 +21,7 @@ export function MobileDock() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-3 overflow-hidden rounded-full bg-ink text-white shadow-[0_10px_40px_rgba(6,59,104,.35)] lg:hidden"
+          className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-2 overflow-hidden rounded-full bg-ink text-white shadow-[0_10px_40px_rgba(6,59,104,.35)] lg:hidden"
           style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
           initial={{ y: 90, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -32,11 +32,7 @@ export function MobileDock() {
             <span className="text-[11px] font-semibold uppercase tracking-[0.12em]">Book</span>
             <span className="text-[10px] text-white/80">Call OPD</span>
           </a>
-          <a href={SITE.emergencyHref} className="flex flex-col items-center gap-1 py-3 text-white hover:text-white">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.12em]">Emergency</span>
-            <span className="text-[10px] text-white/60">24 × 7</span>
-          </a>
-          <a href={SITE.directionsUrl} target="_blank" rel="noopener" className="flex flex-col items-center gap-1 border-l border-white/10 py-3 text-white hover:text-white">
+          <a href={SITE.directionsUrl} target="_blank" rel="noopener" className="flex flex-col items-center gap-1 py-3 text-white hover:text-white">
             <span className="text-[11px] font-semibold uppercase tracking-[0.12em]">Directions</span>
             <span className="text-[10px] text-white/60">Jail Garden Rd</span>
           </a>

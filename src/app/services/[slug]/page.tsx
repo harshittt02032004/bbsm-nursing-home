@@ -96,8 +96,8 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
             </div>
             <Reveal delay={0.4}>
               <p className="r-card mt-10 border border-red/25 bg-red/[.04] px-5 py-4 text-[14px] leading-relaxed text-ink/75">
-                For sudden severe pain, heavy bleeding, breathlessness or loss of consciousness, call our 24×7 emergency line{" "}
-                <a href={SITE.emergencyHref} className="font-semibold text-red">{SITE.emergency}</a>.
+                For sudden severe pain, heavy bleeding, breathlessness or loss of consciousness, call BBSM Nursing Home on{" "}
+                <a href={SITE.phoneHref} className="font-semibold text-red">{SITE.phone}</a> or come straight to the hospital — emergency care is available 24×7.
               </p>
             </Reveal>
           </div>

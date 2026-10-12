@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const FAQ = [
   { q: "What are the OPD timings at BBSM Nursing Home?", a: "Daily OPD runs every day from 10:00 AM to 4:00 PM for orthopaedics and eye care. Visiting consultants see patients daily. The Super Speciality OPD runs on the last Sunday of every month, 9:00 AM to 12:00 PM." },
   { q: "How do I book an appointment?", a: `Call ${SITE.phone}. Our team will confirm the right doctor and timing for you. For the Super Speciality OPD, please call ahead to register.` },
-  { q: "Is there an emergency service?", a: `Yes — for emergencies call ${SITE.emergency}, available 24 × 7.` },
+  { q: "Is there an emergency service?", a: `Yes — emergency care is available 24 × 7. Call ${SITE.phone} or come straight to the hospital.` },
   { q: "Which Delhi specialists visit BBSM?", a: "Every last Sunday, senior specialists including doctors from Rajiv Gandhi Cancer Institute & Research Centre, New Delhi consult at BBSM — oncology, gastro-onco surgery, urology, and IVF & gynaecology." },
   { q: "Where exactly is BBSM Nursing Home?", a: `${SITE.address.full}. It is on Jail Garden Road in Indira Nagar, Raebareli.` },
 ];
@@ -54,15 +54,6 @@ export default function ContactPage() {
               <div className="text-[11.5px] font-medium uppercase tracking-[0.19em] text-red">Appointments</div>
               <a href={SITE.phoneHref} className="mt-3.5 inline-block font-serif text-blue hover:text-red" style={{ fontSize: "clamp(30px,3.4vw,48px)" }}>
                 {SITE.phone}
-              </a>
-            </Reveal>
-            <Reveal delay={0.12} className="border-b border-ink/13 pb-[26px]">
-              <div className="flex items-center gap-2.5 text-[11.5px] font-medium uppercase tracking-[0.19em] text-red">
-                <span className="relative flex h-2 w-2"><span className="pulse-dot absolute inset-0 rounded-full bg-red" /><span className="relative h-2 w-2 rounded-full bg-red" /></span>
-                24 × 7 Emergency
-              </div>
-              <a href={SITE.emergencyHref} className="mt-3 inline-block font-serif text-ink hover:text-red" style={{ fontSize: "clamp(26px,2.8vw,40px)" }}>
-                {SITE.emergency}
               </a>
             </Reveal>
             <Reveal delay={0.16} className="border-b border-ink/13 pb-[26px]">
