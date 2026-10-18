@@ -13,7 +13,7 @@ import { physicianSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: { absolute: "Our Doctors | Best Specialists in Raebareli | BBSM Hospital" },
   description:
-    "11 specialist doctors at BBSM Nursing Home — Raebareli's most experienced hospital team. Daily OPD for orthopaedics and eye care. Monthly Super Speciality OPD with oncologists and IVF specialists from New Delhi.",
+    "11 specialist doctors at BBSM Nursing Home — Raebareli's most experienced hospital team. Daily OPD for eye care and daily visiting specialists. Monthly Super Speciality OPD with oncologists and IVF specialists from New Delhi.",
   keywords: ["doctors in Raebareli", "specialist hospital Raebareli", "orthopaedic Raebareli", "eye doctor Raebareli", "cancer doctor Raebareli"],
   alternates: { canonical: "/doctors" },
 };

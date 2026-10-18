@@ -60,7 +60,7 @@ export const ARTICLES: Article[] = [
       },
       {
         paras: [
-          "If you are unsure, call us. Our team will guide you to the right doctor and the right OPD day — daily OPD for orthopaedics, eye care and visiting specialists, and the Super Speciality OPD with Delhi specialists every last Sunday.",
+          "If you are unsure, call us. Our team will guide you to the right doctor and the right OPD day — daily OPD for eye care, daily visiting specialists including orthopaedics, and the Super Speciality OPD with Delhi specialists every last Sunday.",
         ],
       },
     ],

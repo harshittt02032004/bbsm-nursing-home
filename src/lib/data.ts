@@ -38,22 +38,6 @@ export type Speciality = {
 
 export const DOCTORS: Doctor[] = [
   {
-    slug: "dr-omkar-singh-bhadoria",
-    name: "Dr. Omkar Singh Bhadoria",
-    role: "Orthopaedics & Spine | Bone, Joint & Spine Surgeon",
-    title: "Bone, Joint & Spine Surgeon",
-    group: "Daily OPD",
-    availability: "Every Day | 10:00 AM – 4:00 PM",
-    days: "Every Day",
-    time: "10 AM – 4 PM",
-    forWhat: "Knee pain, back pain, fractures, arthritis, joint replacement, slip disc, spinal disorders, sports injuries",
-    expertise:
-      "Surgical and non-surgical treatment of bone fractures, joint pain, arthritis, knee and hip conditions, slip disc, spinal disorders, and sports injuries. Expert in orthopaedic surgery for the complete musculoskeletal system.",
-    specialities: ["orthopaedics"],
-    portrait: "/images/dr-omkar-singh-bhadoria.jpg",
-    portraitPosition: "50% 15%",
-  },
-  {
     slug: "dr-shailaja-singh",
     name: "Dr. Shailaja Singh",
     role: "Eye Specialist & Surgeon | Ophthalmologist",
@@ -132,6 +116,22 @@ export const DOCTORS: Doctor[] = [
     specialities: ["oncology"],
     portrait: "/images/dr-vineet-talwar.jpg",
     portraitPosition: "50% 10%",
+  },
+  {
+    slug: "dr-omkar-singh-bhadoria",
+    name: "Dr. Omkar Singh Bhadoria",
+    role: "Orthopaedics & Spine | Bone, Joint & Spine Surgeon",
+    title: "Bone, Joint & Spine Surgeon",
+    group: "Visiting",
+    availability: "Every Day | Visiting",
+    days: "Every Day",
+    time: "Visiting",
+    forWhat: "Knee pain, back pain, fractures, arthritis, joint replacement, slip disc, spinal disorders, sports injuries",
+    expertise:
+      "Surgical and non-surgical treatment of bone fractures, joint pain, arthritis, knee and hip conditions, slip disc, spinal disorders, and sports injuries. Expert in orthopaedic surgery for the complete musculoskeletal system.",
+    specialities: ["orthopaedics"],
+    portrait: "/images/dr-omkar-singh-bhadoria.jpg",
+    portraitPosition: "50% 15%",
   },
   {
     slug: "dr-gyanendra-singh",
@@ -217,7 +217,7 @@ export const SPECIALITIES: Speciality[] = [
     name: "Orthopaedics & Spine",
     short: "Orthopaedics",
     doctors: ["Dr. Omkar Singh Bhadoria"],
-    timing: "Daily | 10–4 PM",
+    timing: "Daily Visiting",
     desc: "Surgical and non-surgical treatment of bone fractures, joint pain, arthritis, knee and hip conditions, slip disc, spinal disorders, and sports injuries.",
     intro:
       "Bones, joints and the spine carry us through every working day. At BBSM Nursing Home, orthopaedic care is available every day of the week — from a first consultation for knee or back pain to fracture management and orthopaedic surgery, under one roof in Raebareli.",
@@ -423,7 +423,7 @@ export const GROUPS: { key: Group; title: string; timing: string; accent: string
     title: "Daily Visiting Doctors",
     timing: "Available Every Day",
     accent: "#111820",
-    note: "Visiting consultants covering general medicine, chest, neuro-psychiatry and laparoscopic surgery.",
+    note: "Visiting consultants covering orthopaedics, general medicine, chest, neuro-psychiatry and laparoscopic surgery.",
   },
 ];
 

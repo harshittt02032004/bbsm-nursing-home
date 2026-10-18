@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | BBSM Nursing Home Raebareli",
   },
   description:
-    "BBSM Nursing Home — the most trusted hospital in Raebareli since 1983. Daily OPD for orthopaedics and eye care. Super Speciality OPD every last Sunday with oncologists, IVF specialists, and uro-surgeons from Rajiv Gandhi Cancer Institute, New Delhi. Call +91 96166 06051.",
+    "BBSM Nursing Home — the most trusted hospital in Raebareli since 1983. Daily OPD for eye care and daily visiting specialists. Super Speciality OPD every last Sunday with oncologists, IVF specialists, and uro-surgeons from Rajiv Gandhi Cancer Institute, New Delhi. Call +91 96166 06051.",
   keywords: ["hospital in Raebareli", "best hospital Raebareli", "BBSM Nursing Home", "Brij Bhushan Singh Memorial Nursing Home", "nursing home Raebareli"],
   applicationName: SITE.name,
   alternates: { canonical: "/" },

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const FAQ = [
-  { q: "What are the OPD timings at BBSM Nursing Home?", a: "Daily OPD runs every day from 10:00 AM to 4:00 PM for orthopaedics and eye care. Visiting consultants see patients daily. The Super Speciality OPD runs on the last Sunday of every month, 9:00 AM to 12:00 PM." },
+  { q: "What are the OPD timings at BBSM Nursing Home?", a: "Daily OPD runs every day from 10:00 AM to 4:00 PM for eye care. Visiting consultants, including orthopaedics, see patients daily. The Super Speciality OPD runs on the last Sunday of every month, 9:00 AM to 12:00 PM." },
   { q: "How do I book an appointment?", a: `Call ${SITE.phone}. Our team will confirm the right doctor and timing for you. For the Super Speciality OPD, please call ahead to register.` },
   { q: "Is there an emergency service?", a: `Yes — emergency care is available 24 × 7. Call ${SITE.phone} or come straight to the hospital.` },
   { q: "Which Delhi specialists visit BBSM?", a: "Every last Sunday, senior specialists including doctors from Rajiv Gandhi Cancer Institute & Research Centre, New Delhi consult at BBSM — oncology, gastro-onco surgery, urology, and IVF & gynaecology." },
