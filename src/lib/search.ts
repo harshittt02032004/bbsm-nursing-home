@@ -8,7 +8,7 @@ const PAGES: SearchItem[] = [
   { title: "Home", sub: "BBSM Nursing Home — hospital in Raebareli since 1983", href: "/", kind: "Page", terms: "hospital raebareli nursing home best bbsm brij bhushan" },
   { title: "About BBSM", sub: "Raebareli's first nursing home — our story", href: "/about", kind: "Page", terms: "hospital about history 1983 1972 first legacy" },
   { title: "All Doctors", sub: "11 specialists — Daily OPD, Super Speciality, Visiting", href: "/doctors", kind: "Page", terms: "doctor doctors specialist team list" },
-  { title: "OPD Timings", sub: "Daily 10 AM–4 PM · Last Sunday 9 AM–12 PM", href: "/doctors#timings", kind: "Timings", terms: "timing timings opd hours schedule time when open sunday" },
+  { title: "OPD Timings", sub: "Daily 10 AM–4 PM · Free OPD on last Sunday of every month 9 AM–12 PM", href: "/doctors#timings", kind: "Timings", terms: "timing timings opd hours schedule time when open sunday" },
   { title: "Super Speciality OPD", sub: "Delhi specialists every last Sunday, 9 AM–12 PM", href: "/doctors#super-speciality", kind: "Timings", terms: "sunday last sunday delhi rajiv gandhi cancer institute super speciality monthly" },
   { title: "Specialities", sub: "Orthopaedics, eye, oncology, IVF and more", href: "/services", kind: "Page", terms: "services departments treatments speciality specialities" },
   { title: "Founder's Tribute", sub: "Late Dr. Virendra Singh", href: "/founder", kind: "Page", terms: "virendra singh founder tribute 19 august civil surgeon" },

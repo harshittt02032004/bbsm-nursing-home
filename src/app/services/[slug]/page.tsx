@@ -51,7 +51,7 @@ export default async function SpecialityPage({ params }: { params: Promise<{ slu
               <SplitText as="h1" trigger="mount" delay={0.2} parts={[s.name]} className="t-h1 mt-6 max-w-[14ch]" />
               <p className="a-rise body-lg mt-8 max-w-[52ch] text-white/78" style={{ animationDelay: ".55s" }}>{s.intro}</p>
               <div className="a-rise mt-9 flex flex-wrap items-center gap-x-8 gap-y-3 text-[11.5px] font-medium uppercase tracking-[0.15em]" style={{ animationDelay: ".7s" }}>
-                <span className={monthly ? "text-red" : "text-white"}>{monthly ? "Super Speciality OPD · Last Sunday · 9 AM – 12 PM" : s.timing.includes("Visiting") ? "Daily visiting consultant" : "Daily OPD · 10 AM – 4 PM"}</span>
+                <span className={monthly ? "text-red" : "text-white"}>{monthly ? "Free Super Speciality OPD · Last Sunday of Every Month · 9 AM – 12 PM" : s.timing.includes("Visiting") ? "Daily visiting consultant" : "Daily OPD · 10 AM – 4 PM"}</span>
                 <span className="text-white/55">{s.doctors.join(", ")}</span>
               </div>
               <div className="a-rise mt-10 flex flex-wrap gap-3.5" style={{ animationDelay: ".8s" }}>

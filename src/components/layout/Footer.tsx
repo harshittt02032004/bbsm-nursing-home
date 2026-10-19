@@ -11,10 +11,10 @@ type IconName = "phone" | "clock" | "calendar" | "instagram" | "star" | "pin";
 const CONTACT: { label: string; value: string; href?: string; icon: IconName }[] = [
   { label: "Appointments", value: SITE.phone, href: SITE.phoneHref, icon: "phone" },
   { label: "Daily OPD", value: "Every day, 10 AM – 4 PM", icon: "clock" },
-  { label: "Super Speciality OPD", value: "Last Sunday, 9 AM – 12 PM", icon: "calendar" },
+  { label: "Super Speciality OPD", value: "Free OPD · Last Sunday of Month", icon: "calendar" },
 ];
 
-const TICKER = ["Care You Can Trust", "Raebareli's First Nursing Home", "Est. 1983", "11 Specialists", "24×7 Emergency", "Delhi Specialists Every Last Sunday"];
+const TICKER = ["Care You Can Trust", "Raebareli's First Nursing Home", "Est. 1983", "11 Specialists", "24×7 Emergency", "Free Super Speciality OPD · Last Sunday of Every Month"];
 
 /**
  * Footer: a light contact capsule straddling the footer's top edge (echoing the header
@@ -85,7 +85,7 @@ export default function Footer() {
                 <Image src="/images/bbsm-logo.png" alt="BBSM Nursing Home — Care You Can Trust" width={50} height={64} className="h-16 w-auto" />
               </span>
               <span>
-                <span className="block font-serif text-[26px] leading-none">BBSM Nursing Home</span>
+                <span className="block font-serif text-[26px] leading-none text-red">BBSM</span>
                 <span className="mt-2 block text-[10.5px] uppercase tracking-[0.18em] text-white/55">Hospital in Raebareli · Est. 1983</span>
               </span>
             </Link>

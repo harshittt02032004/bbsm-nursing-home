@@ -31,7 +31,7 @@ export const SITE = {
   facebook: "https://www.facebook.com/search/top?q=Brij%20Bhushan%20Singh%20Memorial%20Nursing",
   hours: {
     dailyOpd: "Every Day · 10:00 AM – 4:00 PM",
-    superOpd: "Last Sunday of Month · 9:00 AM – 12:00 PM",
+    superOpd: "Free OPD · Last Sunday of Every Month · 9:00 AM – 12:00 PM",
   },
 } as const;
 

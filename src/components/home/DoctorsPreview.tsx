@@ -37,7 +37,7 @@ export default function DoctorsPreview() {
                 <Reveal as="li" key={d.slug} delay={i * 0.03} y={14}>
                   {firstOfGroup && (
                     <div className={`meta pb-2 ${i ? "pt-8" : ""} ${d.group === "Super Speciality" ? "text-red" : d.group === "Daily OPD" ? "text-blue" : "text-ink/60"}`} style={{ fontSize: 10.5 }}>
-                      {d.group === "Super Speciality" ? "Super Speciality OPD · Last Sunday" : d.group === "Daily OPD" ? "Daily OPD · 10 AM – 4 PM" : "Daily Visiting"}
+                      {d.group === "Super Speciality" ? "Super Speciality OPD · Free OPD on Last Sunday of Every Month" : d.group === "Daily OPD" ? "Daily OPD · 10 AM – 4 PM" : "Daily Visiting"}
                     </div>
                   )}
                   <button
@@ -97,7 +97,7 @@ export default function DoctorsPreview() {
               <Link key={d.slug} href={`/doctors/${d.slug}`} className="w-[74vw] max-w-[320px] shrink-0 snap-start text-ink hover:text-ink">
                 <DoctorPortrait doctor={d} className="aspect-[4/5]" sizes="74vw" />
                 <div className={`meta mt-4 ${d.group === "Super Speciality" ? "text-red" : "text-blue"}`} style={{ fontSize: 10 }}>
-                  {d.group === "Super Speciality" ? "Last Sunday · 9–12" : d.group === "Daily OPD" ? "Daily OPD · 10–4" : "Daily Visiting"}
+                  {d.group === "Super Speciality" ? "Free OPD · Last Sunday · 9–12" : d.group === "Daily OPD" ? "Daily OPD · 10–4" : "Daily Visiting"}
                 </div>
                 <div className="mt-1.5 font-serif text-[26px] leading-[1.1]">{d.name}</div>
                 <div className="mt-1 text-[13px] font-light text-ink/65">{d.title}</div>

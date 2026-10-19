@@ -79,7 +79,7 @@ export default function Header() {
               <span className="text-white/80">{SITE.phone}</span>
             </a>
             <span className="hidden text-white/60 md:block">
-              Daily OPD 10 AM – 4 PM <span className="mx-2 text-white/30">/</span> Super Speciality OPD · Last Sunday 9 AM – 12 PM
+              Daily OPD 10 AM – 4 PM <span className="mx-2 text-white/30">/</span> Free Super Speciality OPD · Last Sunday of Every Month · 9 AM – 12 PM
             </span>
           </div>
         </motion.div>
@@ -116,7 +116,7 @@ export default function Header() {
                 </span>
                 <span className="hidden leading-[1.15] sm:block">
                   <span className="block whitespace-nowrap font-serif text-[clamp(20px,1.85vw,24px)] leading-none">
-                    <span className="text-red">BBSM</span> <span className={dark ? "text-tribute-text" : "text-blue"}>Nursing Home</span>
+                    <span className="text-red">BBSM</span>
                   </span>
                   <span
                     className={`block overflow-hidden text-[10px] uppercase tracking-[0.16em] transition-[max-height,opacity,margin] md:text-[10.5px] lg:max-[1479px]:hidden ${SPRING} ${
