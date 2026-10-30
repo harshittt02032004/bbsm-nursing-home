@@ -1,4 +1,4 @@
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://bbsm-nursing-home.vercel.app").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://bbsmraebareli.com").replace(/\/$/, "");
 
 export const SITE = {
   name: "BBSM Nursing Home",
